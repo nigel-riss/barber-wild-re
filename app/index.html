@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Barber WILD</title>
+
+    <link rel="import" href="header.html">
+    <link rel="import" href="footer.html">
+</head>
+<body>
+    <!--
+        Page header
+    -->
+    <script>
+        var menuLink = document.querySelector('link[rel="import"][href="header.html"]');
+        var menuContent = menuLink.import;
+        var menuElement = menuContent.querySelector('.site-header');
+        document.body.appendChild(menuElement.cloneNode(true));
+    </script>
+
+    <!--
+        Hero
+    -->
+    <div class="hero">
+        <div class="hero__scene">
+
+        </div>
+
+        <div class="hero__text-content">
+            <h1 class="hero__title">
+                «Barber WILD»<br><small> — то, что нужно для твоей головы</small>
+            </h1>
+            <p class="hero__subtitle">
+                Мужская косметика с характером
+            </p>
+        </div>
+    </div>
+
+    <main>
+        <article class="shop-item">
+            <div class="shop-item__image">
+
+            </div>
+            <div class="shop-item__description">
+                <h2 class="shop-item__title">
+
+                </h2>
+                <div class="shop-item__text">
+                    
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!--
+        Page footer
+    -->
+</body>
+</html>
