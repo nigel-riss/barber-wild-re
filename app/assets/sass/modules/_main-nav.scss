@@ -1,0 +1,46 @@
+.main-nav {
+    // typography
+    font-size: 0;
+
+    ul {
+        // box model
+        margin: 0;
+        padding: 0;
+
+        // visual
+        list-style: none;
+    }
+
+    li {
+        // box model
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+
+        // visual
+    }
+
+    a {
+        // box model
+        display: block;
+        padding: 15px 30px;
+        padding-top: 16px;
+        padding-bottom: 14px;
+
+        // typography
+        color: $darkSand;
+        font-family: $captionFont;
+        font-size: 1rem;
+        font-weight: 400;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        // visual
+        // border: 1px solid red;
+
+        &:hover {
+            // typography
+            color: $justSand;
+        }
+    }
+}

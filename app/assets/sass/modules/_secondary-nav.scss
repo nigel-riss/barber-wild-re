@@ -1,0 +1,47 @@
+.secondary-nav {
+    // positioning
+    position: absolute;
+    left: 0;
+    top: 50px;
+
+    // box model
+    padding: 20px 40px;
+
+    // visual
+    background-color: $darkGrey;
+    border: 1px solid $darkSand;
+
+    // typography
+    font-size: 0;
+    text-align: left;
+
+    ul {
+        // box model
+        margin: 0;
+        padding: 0;
+
+        // visual
+        list-style: none;
+    }
+
+    li {
+        // box model
+        margin: 0;
+        padding: 10px;
+    }
+
+    a {
+        // typography
+        color: $darkSand;
+        font-family: $captionFont;
+        font-size: 1.25rem;
+        font-weight: 400;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &:hover {
+            // typography
+            color: $justSand;
+        }
+    }
+}

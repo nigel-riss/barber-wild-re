@@ -401,3 +401,113 @@ template {
  */
 [hidden] {
   display: none; }
+
+html {
+  box-sizing: border-box; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+body {
+  font-size: 16px;
+  background-color: #f2dcba; }
+
+.site-header {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  text-align: center;
+  background-color: #121212;
+  border-bottom: 2px solid #252525; }
+  .site-header__logo {
+    position: absolute;
+    top: 9px;
+    left: 20px;
+    height: 32px;
+    width: 165px;
+    font-size: 0;
+    background-image: url("../../assets/img/logo.svg");
+    background-repeat: no-repeat; }
+
+.main-nav {
+  font-size: 0; }
+  .main-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  .main-nav li {
+    display: inline-block;
+    margin: 0;
+    padding: 0; }
+  .main-nav a {
+    display: block;
+    padding: 15px 30px;
+    padding-top: 16px;
+    padding-bottom: 14px;
+    color: #c9aa71;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none;
+    text-transform: uppercase; }
+    .main-nav a:hover {
+      color: #f2dcba; }
+
+.secondary-nav {
+  position: absolute;
+  left: 0;
+  top: 50px;
+  padding: 20px 40px;
+  background-color: #121212;
+  border: 1px solid #c9aa71;
+  font-size: 0;
+  text-align: left; }
+  .secondary-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  .secondary-nav li {
+    margin: 0;
+    padding: 10px; }
+  .secondary-nav a {
+    color: #c9aa71;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    text-decoration: none;
+    text-transform: uppercase; }
+    .secondary-nav a:hover {
+      color: #f2dcba; }
+
+.hero {
+  position: relative;
+  height: 49.7vw;
+  width: 100%;
+  margin-top: 50px;
+  font-size: 0;
+  background-color: #2e2030;
+  overflow: hidden; }
+  .hero__text-content {
+    position: absolute;
+    right: 40px;
+    bottom: 20px;
+    text-align: right; }
+  .hero__title {
+    color: #ffffff;
+    font-family: "Roboto Slab", Georgia, serif;
+    font-size: 3rem; }
+  .hero__subtitle {
+    color: #ffffff;
+    font-family: "Roboto Slab", Georgia, serif;
+    font-size: 1.5rem; }
+
+.scene {
+  position: relative;
+  height: 49.7vw;
+  width: 100%;
+  background-image: url("../../assets/img/background.jpg");
+  background-position: center center;
+  background-size: cover; }

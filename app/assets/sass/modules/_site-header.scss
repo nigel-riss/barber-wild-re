@@ -1,0 +1,36 @@
+.site-header {
+    // positioning
+    position: absolute;
+    top: 0;
+    z-index: 10;
+
+    // box model
+    width: 100%;
+
+    // typography
+        text-align: center;
+
+
+    // visual
+    background-color: $darkGrey;
+    border-bottom: 2px solid $justGrey;
+    // opacity: 0.5;
+
+    &__logo {
+        // positioning
+        position: absolute;
+        top: 9px;
+        left: 20px;
+
+        // box model
+        height: 32px;
+        width: 165px;
+
+        // typography
+        font-size: 0;
+
+        // visual
+        background-image: url('../../assets/img/logo.svg');
+        background-repeat: no-repeat;
+    }
+}
