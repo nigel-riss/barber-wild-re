@@ -3,7 +3,7 @@
     position: relative;
 
     // box model
-    height: 49.7vw;
+    height: 46.7vw;
     width: 100%;
     margin-top: 50px;
 
@@ -19,7 +19,8 @@
         // z-index: 999;
         // top: 0;
         right: 40px;
-        bottom: 20px;
+        bottom: 40px;
+        // bottom: 14em;    
         // bottom: 0;
 
         // typography
@@ -27,6 +28,11 @@
     }
 
     &__title {
+        // box model
+        margin: 0;
+        padding: 0;
+        padding-bottom: 0.5em;
+
         // typography
         color: #ffffff;
         // color: $justSand;
@@ -35,10 +41,15 @@
     }
 
     &__subtitle {
+        // box model
+        margin: 0;
+        padding: 0;
+
         // typography
         color: #ffffff;
         // color: $justSand;
         font-family: $mainFont;
         font-size: 1.5rem;
+        font-weight: 300;
     }
 }
