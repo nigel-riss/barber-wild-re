@@ -14,12 +14,31 @@
     background-color: #2e2030;
     overflow: hidden;
 
+    &::after {
+        content: "";
+
+        // positioning
+        position: absolute;
+        bottom: -120px;
+        // z-index: 5;
+
+        // box model
+        height: 100%;
+        width: 100%;
+
+        // visual
+        background-image: url('../../assets/img/hero-sands.svg');
+        background-size: 1000px 300px;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
     &__text-content {
         position: absolute;
         // z-index: 999;
         // top: 0;
-        right: 40px;
-        bottom: 40px;
+        right: 65px;
+        bottom: 110px;
         // bottom: 14em;    
         // bottom: 0;
 
@@ -31,12 +50,12 @@
         // box model
         margin: 0;
         padding: 0;
-        padding-bottom: 0.5em;
+        padding-bottom: 0.3em;
 
         // typography
         color: #ffffff;
         // color: $justSand;
-        font-family: $mainFont;
+        font-family: $captionFont;
         font-size: 3rem;
     }
 

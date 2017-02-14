@@ -402,6 +402,12 @@ template {
 [hidden] {
   display: none; }
 
+@font-face {
+  font-family: 'Intro';
+  src: url("../../assets/fonts/intro-400-normal.woff2") format("woff2"), url("../../assets/fonts/intro-400-normal.woff") format("woff"), url("../../assets/fonts/intro-400-normal.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
 html {
   box-sizing: border-box; }
 
@@ -448,7 +454,7 @@ body {
     padding-top: 16px;
     padding-bottom: 14px;
     color: #c9aa71;
-    font-family: "Roboto Condensed", sans-serif;
+    font-family: "Intro", sans-serif;
     font-size: 1rem;
     font-weight: 400;
     text-decoration: none;
@@ -476,7 +482,7 @@ body {
     display: block;
     padding: 5px;
     color: #c9aa71;
-    font-family: "Roboto Condensed", sans-serif;
+    font-family: "Intro", sans-serif;
     font-size: 1.25rem;
     font-weight: 400;
     text-decoration: none;
@@ -492,17 +498,27 @@ body {
   font-size: 0;
   background-color: #2e2030;
   overflow: hidden; }
+  .hero::after {
+    content: "";
+    position: absolute;
+    bottom: -120px;
+    height: 100%;
+    width: 100%;
+    background-image: url("../../assets/img/hero-sands.svg");
+    background-size: 1000px 300px;
+    background-position: center center;
+    background-repeat: no-repeat; }
   .hero__text-content {
     position: absolute;
-    right: 40px;
-    bottom: 40px;
+    right: 65px;
+    bottom: 110px;
     text-align: right; }
   .hero__title {
     margin: 0;
     padding: 0;
-    padding-bottom: 0.5em;
+    padding-bottom: 0.3em;
     color: #ffffff;
-    font-family: "Roboto Slab", Georgia, serif;
+    font-family: "Intro", sans-serif;
     font-size: 3rem; }
   .hero__subtitle {
     margin: 0;
@@ -519,3 +535,11 @@ body {
   background-image: url("../../assets/img/background.jpg");
   background-position: center center;
   background-size: cover; }
+
+.shop-item {
+  font-family: "Roboto Slab", Georgia, serif; }
+  .shop-item__title {
+    font-size: 3rem;
+    font-weight: 300; }
+  .shop-item__text {
+    font-size: 1.125rem; }

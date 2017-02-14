@@ -1,5 +1,8 @@
 @import "normalize.css";
 
+// Fonts
+@import "fonts/intro";
+
 // Globals
 @import "base/vars";
 @import "base/mixins";
@@ -12,3 +15,4 @@
 @import "modules/secondary-nav";
 @import "modules/hero";
 @import "modules/scene";
+@import "modules/shop-item";

@@ -1,0 +1,15 @@
+.shop-item {
+    // typography
+    font-family: $mainFont;
+
+    &__title {
+        // typography
+        font-size: 3rem;
+        font-weight: 300;
+    }
+
+    &__text {
+        // typography
+        font-size: 1.125rem;
+    }
+}
