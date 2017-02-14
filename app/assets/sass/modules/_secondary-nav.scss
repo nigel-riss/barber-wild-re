@@ -2,7 +2,7 @@
     // positioning
     position: absolute;
     left: 0;
-    top: 50px;
+    top: 49px;
 
     // box model
     padding: 20px 40px;
@@ -10,6 +10,7 @@
     // visual
     background-color: $darkGrey;
     border: 1px solid $darkSand;
+    border: 1px solid $justGrey;
 
     // typography
     font-size: 0;
@@ -38,7 +39,8 @@
         // typography
         color: $darkSand;
         font-family: $captionFont;
-        font-size: 1.25rem;
+        font-size: 1.125rem;
+        font-size: 1rem;
         font-weight: 400;
         text-decoration: none;
         text-transform: uppercase;

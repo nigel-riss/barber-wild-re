@@ -1,15 +1,125 @@
 .shop-item {
+    // positioning
+    position: relative;
+
+    // box model
+    margin: 0 auto;
+    padding-bottom: 100px;
+    width: 1080px;
+
     // typography
     font-family: $mainFont;
+    // border: 1px solid blue;
+
+    @include clearfix;
+
+    &--alt {
+        .shop-item__image {
+            // box model
+            float: right;
+        }
+
+        .shop-item__description {
+            // box model
+            float:left;
+            padding-right: 100px;
+            padding-left: 0;
+        }
+    }
+
+    &--clay {
+        &::before {
+            content: "";
+
+            // positioning
+            position: absolute;
+            top: 80px;
+            right: -300px;
+            z-index: -1;
+
+            // box model
+            height: 502px;
+            width: 889px;
+            // border: 1px solid red;
+
+            // visual
+            background-image: url('../../assets/img/clay-right.jpg');
+        }
+    }
+
+    &--soap {
+        &::before {
+            content: "";
+
+            // positioning
+            position: absolute;
+            top: 30px;
+            left: -300px;
+            z-index: -1;
+
+            // box model
+            height: 541px;
+            width: 768px;
+            // border: 1px solid red;
+
+            // visual
+            background-image: url('../../assets/img/soap-left.jpg')
+        }
+
+        &::after {
+            content: "";
+
+            // positioning
+            position: absolute;
+            top: 0;
+            right: -300px;
+            z-index: 1;
+
+            // box model
+            height: 604px;
+            width: 345px;
+            // border: 1px solid red;
+
+            // visual
+            background-image: url('../../assets/img/soap-right.jpg');
+        }
+    }
+
+    &__image {
+        // box model
+        float: left;
+        width: 35%;
+        // border: 1px solid red;
+    }
+
+    &__description {
+        // box model
+        float: right;
+        width: 65%;
+        padding-left: 100px;
+        // border: 1px solid red;
+    }
 
     &__title {
+        // box model
+        padding-left: 20px;
+
         // typography
+        color: $darkBlue;
         font-size: 3rem;
         font-weight: 300;
+        line-height: 1.4;
+        text-indent: 20px;
     }
 
     &__text {
+        // box model
+        padding-left: 45px;
+
         // typography
+        color: $darkBlue;
         font-size: 1.125rem;
+        font-weight: 300;
+        line-height: 1.4;
     }
 }

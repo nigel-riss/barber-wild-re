@@ -465,10 +465,11 @@ body {
 .secondary-nav {
   position: absolute;
   left: 0;
-  top: 50px;
+  top: 49px;
   padding: 20px 40px;
   background-color: #121212;
   border: 1px solid #c9aa71;
+  border: 1px solid #252525;
   font-size: 0;
   text-align: left; }
   .secondary-nav ul {
@@ -483,7 +484,8 @@ body {
     padding: 5px;
     color: #c9aa71;
     font-family: "Intro", sans-serif;
-    font-size: 1.25rem;
+    font-size: 1.125rem;
+    font-size: 1rem;
     font-weight: 400;
     text-decoration: none;
     text-transform: uppercase; }
@@ -501,12 +503,12 @@ body {
   .hero::after {
     content: "";
     position: absolute;
-    bottom: -120px;
+    bottom: -1px;
     height: 100%;
     width: 100%;
     background-image: url("../../assets/img/hero-sands.svg");
-    background-size: 1000px 300px;
-    background-position: center center;
+    background-size: 102%;
+    background-position: bottom center;
     background-repeat: no-repeat; }
   .hero__text-content {
     position: absolute;
@@ -524,7 +526,7 @@ body {
     margin: 0;
     padding: 0;
     color: #ffffff;
-    font-family: "Roboto Slab", Georgia, serif;
+    font-family: "Roboto Slab", serif;
     font-size: 1.5rem;
     font-weight: 300; }
 
@@ -537,9 +539,66 @@ body {
   background-size: cover; }
 
 .shop-item {
-  font-family: "Roboto Slab", Georgia, serif; }
+  position: relative;
+  margin: 0 auto;
+  padding-bottom: 100px;
+  width: 1080px;
+  font-family: "Roboto Slab", serif; }
+  .shop-item::after {
+    content: "";
+    clear: both;
+    display: table;
+    width: 100%; }
+  .shop-item--alt .shop-item__image {
+    float: right; }
+  .shop-item--alt .shop-item__description {
+    float: left;
+    padding-right: 100px;
+    padding-left: 0; }
+  .shop-item--clay::before {
+    content: "";
+    position: absolute;
+    top: 80px;
+    right: -300px;
+    z-index: -1;
+    height: 502px;
+    width: 889px;
+    background-image: url("../../assets/img/clay-right.jpg"); }
+  .shop-item--soap::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: -300px;
+    z-index: -1;
+    height: 541px;
+    width: 768px;
+    background-image: url("../../assets/img/soap-left.jpg"); }
+  .shop-item--soap::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -300px;
+    z-index: 1;
+    height: 604px;
+    width: 345px;
+    background-image: url("../../assets/img/soap-right.jpg"); }
+  .shop-item__image {
+    float: left;
+    width: 35%; }
+  .shop-item__description {
+    float: right;
+    width: 65%;
+    padding-left: 100px; }
   .shop-item__title {
+    padding-left: 20px;
+    color: #152026;
     font-size: 3rem;
-    font-weight: 300; }
+    font-weight: 300;
+    line-height: 1.4;
+    text-indent: 20px; }
   .shop-item__text {
-    font-size: 1.125rem; }
+    padding-left: 45px;
+    color: #152026;
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 1.4; }

@@ -19,7 +19,7 @@
 
         // positioning
         position: absolute;
-        bottom: -120px;
+        bottom: -1px;
         // z-index: 5;
 
         // box model
@@ -28,8 +28,8 @@
 
         // visual
         background-image: url('../../assets/img/hero-sands.svg');
-        background-size: 1000px 300px;
-        background-position: center center;
+        background-size: 102%;
+        background-position: bottom center;
         background-repeat: no-repeat;
     }
 
