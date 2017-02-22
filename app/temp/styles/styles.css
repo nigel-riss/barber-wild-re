@@ -449,6 +449,7 @@ body {
     margin: 0;
     padding: 0; }
   .main-nav a {
+    position: relative;
     display: block;
     padding: 15px 30px;
     padding-top: 16px;
@@ -458,9 +459,22 @@ body {
     font-size: 1rem;
     font-weight: 400;
     text-decoration: none;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    transition: all 0.25s ease-out; }
+    .main-nav a::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 20px;
+      width: 100%;
+      background-image: radial-gradient(at bottom, rgba(242, 220, 186, 0.15) 0%, rgba(242, 220, 186, 0) 50%, transparent 100%);
+      opacity: 0;
+      transition: all 0.25s ease-out; }
     .main-nav a:hover {
       color: #f2dcba; }
+      .main-nav a:hover::before {
+        opacity: 1; }
 
 .secondary-nav {
   position: absolute;
@@ -521,7 +535,8 @@ body {
     padding-bottom: 0.3em;
     color: #ffffff;
     font-family: "Intro", sans-serif;
-    font-size: 3rem; }
+    font-size: 3rem;
+    flex-wrap: 100; }
   .hero__subtitle {
     margin: 0;
     padding: 0;
@@ -541,64 +556,143 @@ body {
 .shop-item {
   position: relative;
   margin: 0 auto;
-  padding-bottom: 100px;
-  width: 1080px;
+  padding-bottom: 200px;
+  width: 600px;
+  color: #152026;
   font-family: "Roboto Slab", serif; }
-  .shop-item::after {
-    content: "";
-    clear: both;
-    display: table;
-    width: 100%; }
   .shop-item--alt .shop-item__image {
     float: right; }
-  .shop-item--alt .shop-item__description {
-    float: left;
-    padding-right: 100px;
-    padding-left: 0; }
-  .shop-item--clay::before {
-    content: "";
-    position: absolute;
-    top: 80px;
-    right: -300px;
-    z-index: -1;
-    height: 502px;
-    width: 889px;
-    background-image: url("../../assets/img/clay-right.jpg"); }
-  .shop-item--soap::before {
-    content: "";
-    position: absolute;
-    top: 30px;
-    left: -300px;
-    z-index: -1;
-    height: 541px;
-    width: 768px;
-    background-image: url("../../assets/img/soap-left.jpg"); }
-  .shop-item--soap::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: -300px;
-    z-index: 1;
-    height: 604px;
-    width: 345px;
-    background-image: url("../../assets/img/soap-right.jpg"); }
   .shop-item__image {
-    float: left;
-    width: 35%; }
-  .shop-item__description {
-    float: right;
-    width: 65%;
-    padding-left: 100px; }
+    position: absolute;
+    z-index: -1;
+    height: 600px;
+    width: 600px;
+    background-repeat: no-repeat; }
+    .shop-item--clay .shop-item__image {
+      content: "";
+      position: absolute;
+      top: -70px;
+      left: -480px;
+      background-image: url("../../assets/img/b1_clay_j.jpg"); }
+    .shop-item--oil .shop-item__image {
+      content: "";
+      position: absolute;
+      top: -50px;
+      right: -400px;
+      z-index: -2;
+      background-image: url("../../assets/img/b2_oil_j.jpg"); }
+    .shop-item--pomade .shop-item__image {
+      content: "";
+      position: absolute;
+      top: -50px;
+      left: -500px;
+      background-image: url("../../assets/img/b3_pomade_j.jpg"); }
+    .shop-item--soap .shop-item__image {
+      content: "";
+      position: absolute;
+      top: -70px;
+      right: -460px;
+      background-image: url("../../assets/img/b4_soap_j.jpg"); }
+  .shop-item__deco {
+    position: relative;
+    background-repeat: no-repeat; }
+    .shop-item--clay .shop-item__deco {
+      content: "";
+      position: absolute;
+      top: 80px;
+      right: -400px;
+      z-index: -1;
+      height: 675px;
+      width: 885px;
+      background-image: url("../../assets/img/clay-right.jpg"); }
+    .shop-item--oil .shop-item__deco {
+      content: "";
+      position: absolute;
+      top: -150px;
+      left: -520px;
+      z-index: -1;
+      height: 795px;
+      width: 671px;
+      background-image: url("../../assets/img/oil-left.jpg"); }
+    .shop-item--pomade .shop-item__deco {
+      content: "";
+      position: absolute;
+      top: -20px;
+      right: -460px;
+      z-index: -1;
+      height: 680px;
+      width: 701px;
+      background-image: url("../../assets/img/pomade-right.jpg"); }
+    .shop-item--soap .shop-item__deco {
+      content: "";
+      position: absolute;
+      top: -130px;
+      left: -450px;
+      z-index: -1;
+      height: 826px;
+      width: 974px;
+      background-image: url("../../assets/img/soap-left.jpg"); }
   .shop-item__title {
-    padding-left: 20px;
-    color: #152026;
+    padding-left: 0px;
     font-size: 3rem;
     font-weight: 300;
     line-height: 1.4;
     text-indent: 20px; }
   .shop-item__text {
-    padding-left: 45px;
-    color: #152026;
+    padding-left: 25px;
     font-size: 1.125rem;
     font-weight: 300;
     line-height: 1.4; }
+  .shop-item__buttons {
+    padding-left: 25px;
+    padding-top: 40px; }
+
+.button {
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  height: 48px;
+  padding: 0 30px;
+  padding-top: 14px;
+  color: #152026;
+  font-family: "Intro", sans-serif;
+  font-size: 1.125rem;
+  text-decoration: none;
+  background-color: #a86633;
+  background-image: linear-gradient(to right, #e9a86d 0%, #f7e3cb 22%, #a86633 50%, #ffd897 100%);
+  border-radius: 24px;
+  box-shadow: 0 1px 3px 0 rgba(24, 15, 8, 0.5);
+  cursor: pointer;
+  transition: all 0.25s ease-out; }
+  .button::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    z-index: -1;
+    height: 44px;
+    width: calc(100% - 4px);
+    background-color: #f6dfb2;
+    border-radius: 22px;
+    box-shadow: inset 0 0 35px 0 rgba(24, 15, 8, 0.5); }
+  .button::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 12px;
+    z-index: 1;
+    height: 15px;
+    width: calc(100% - 26px);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.1));
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px; }
+  .button:hover {
+    color: #fffb1d;
+    text-shadow: 0 0 30px #fd7c1d, 0 0 20px #fd7c1d, 0 0 10px #fd7c1d;
+    box-shadow: 0 5px 11px 1px rgba(24, 15, 8, 0.3); }
+    .button:hover::before {
+      box-shadow: inset 0 0 35px 0 rgba(24, 15, 8, 0.65); }
+  .button--right-m {
+    margin-right: 40px; }
