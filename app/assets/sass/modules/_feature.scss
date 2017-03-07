@@ -1,0 +1,21 @@
+.feature {
+    // box model
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+
+    // typography
+    color: $darkBlue;
+    font-family: $mainFont;
+    text-align: center;
+
+    &__title {
+        // typography
+    }
+
+    &__text {
+        // typography
+        line-height: 1.4;
+        font-weight: 300;
+    }
+}

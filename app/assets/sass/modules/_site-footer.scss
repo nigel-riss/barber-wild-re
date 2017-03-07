@@ -1,0 +1,12 @@
+.site-footer {
+    // positioning
+    position: relative;
+
+    // box model
+    height: 600px;
+    margin-bottom: 48px;
+
+    // visual
+    background-image: url('../../assets/img/footer-bg.jpg');
+    background-position: center bottom;
+}

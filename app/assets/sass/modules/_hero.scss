@@ -4,8 +4,9 @@
 
     // box model
     height: 46.7vw;
+    // height: 800px;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 48px;
 
     // typography
     font-size: 0;
@@ -14,23 +15,18 @@
     background-color: #2e2030;
     overflow: hidden;
 
-    &::after {
-        content: "";
-
-        // positioning
-        position: absolute;
-        bottom: -1px;
-        // z-index: 5;
-
+    &--about {
         // box model
-        height: 100%;
-        width: 100%;
+        // height: 800px;
 
-        // visual
-        background-image: url('../../assets/img/hero-sands.svg');
-        background-size: 102%;
-        background-position: bottom center;
-        background-repeat: no-repeat;
+        .hero__text-content {
+            // positioning
+            right: 200px;
+            bottom: 150px;
+
+            // typography
+            text-align: left;
+        }
     }
 
     &__text-content {
@@ -38,15 +34,62 @@
         // z-index: 999;
         // top: 0;
         right: 65px;
-        bottom: 110px;
+        bottom: 130px;
         // bottom: 14em;    
         // bottom: 0;
 
         // typography
         text-align: right;
+
+        // visual
+        background-color: $darkGrey;
+        background-color: rgba($darkGrey, 0.7);
+        border: 1px solid #373025;
+        border: 3px double rgba($darkSand, 0.2);
+        border: 3px double #373025;
+        padding: 40px;
+
+        &::before {
+            content: "";
+
+            // positioning
+            position: absolute;
+            top: -3px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            // box model
+            height: 24px;
+            width: 600px;
+
+            // visual
+            // border: 1px solid red;
+            background-image: url("../../assets/img/hero-deco-up.png");
+        }
+
+        &::after {
+            content: "";
+
+            // positioning
+            position: absolute;
+            bottom: -3px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            // box model
+            height: 24px;
+            width: 600px;
+
+            // visual
+            background-image: url("../../assets/img/hero-deco-down.png");
+        }
     }
 
     &__title {
+        // positioning
+        position: relative;
+        z-index: 2;
+
         // box model
         margin: 0;
         padding: 0;
@@ -54,10 +97,46 @@
 
         // typography
         color: #ffffff;
-        // color: $justSand;
+        color: $justSand;
+        color: transparent;
+        // color: $darkSand;
         font-family: $captionFont;
         font-size: 3rem;
         flex-wrap: 100;
+        text-align: center;
+
+        // visual
+        background-image: -webkit-linear-gradient($justSand, #5d4f34);
+        -webkit-background-clip: text;
+
+        // &::before {
+        //     content: "О «Barber WILD»";
+
+        //     // positioning
+        //     position: absolute;
+        //     // top: 10px;
+        //     // left: 10px;
+        //     z-index: -3;
+            
+        //     // typography
+
+        //     // visual
+        //     border: 1px solid red;
+        //     text-shadow: 0 0 2px #ffffff;
+        // }
+    }
+
+    &__motto {
+        // box model
+        margin: 0;
+        padding: 0;
+        padding-bottom: 0.75em;
+
+        // typography
+        color: $justSand;
+        // color: $darkSand;
+        font-family: $captionFont;
+        font-size: 2rem;
     }
 
     &__subtitle {
@@ -67,9 +146,28 @@
 
         // typography
         color: #ffffff;
-        // color: $justSand;
+        color: $justSand;
+        // color: $darkSand;
+        // color: #8c7b5e;
         font-family: $mainFont;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         font-weight: 300;
+        text-align: center;
+    }
+
+    &__text {
+        // box model
+        width: 700px;
+
+        // typography
+        color: $justSand;
+        // color: $darkSand;
+        // color: #ffffff;
+        font-family: $mainFont;
+        font-size: 1.125rem;
+        font-size: 1rem;
+        font-weight: 300;
+        line-height: 1.4;
+        text-indent: 2em;
     }
 }

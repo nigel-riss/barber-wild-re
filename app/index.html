@@ -2,7 +2,12 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
     <title>Barber WILD</title>
+
+
 
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="./temp/styles/styles.css">
@@ -30,15 +35,18 @@
 
         <div class="hero__text-content">
             <h1 class="hero__title">
-                «Barber WILD»<br><small> — то, что нужно для твоей головы</small>
+                «Barber WILD»
             </h1>
+            <p class="hero__motto">
+                — то, что нужно для твоей головы
+            </p>
             <p class="hero__subtitle">
                 Мужская косметика с характером
             </p>
         </div>
     </div>
 
-    <main>
+    <main class="site-main">
         <article class="shop-item  shop-item--clay">
             <div class="shop-item__deco "></div>
             <div class="shop-item__image"></div>
@@ -110,13 +118,64 @@
                 </div>
             </div>
         </article>
+
+        <section>
+            <video width="320" height="240" controls>
+                <source src="./assets/video/promo.mp4" type="video/mp4">
+                <!--<source src="movie.ogg" type="video/ogg">-->
+                Your browser does not support the video tag.
+                </video>
+        </section>
     </main>
 
     <!--
         Page footer
     -->
     <footer class="site-footer">
-
+        <nav class="footer-nav">
+            <ul>
+                <li>
+                    <a href="about.html">
+                        О нас
+                    </a>
+                </li>
+                <li>
+                    <a href="shop.html">
+                        Каталог
+                    </a>
+                </li>
+                <li>
+                    <a href="coop.html">
+                        Сотрудничество
+                    </a>
+                </li>
+                <!--<li>
+                    <a href="promos.html">
+                        Акции
+                    </a>
+                </li>
+                <li>
+                    <a href="faq.html">
+                        Вопрос — ответ
+                    </a>
+                </li>
+                <li>
+                    <a href="gallery.html">
+                        Галерея
+                    </a>
+                </li>
+                <li>
+                    <a href="recomendations.html">
+                        Советы
+                    </a>
+                </li>-->
+                <li>
+                    <a href="find.html">
+                        Найти магазин
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </footer>
 </body>
 </html>
