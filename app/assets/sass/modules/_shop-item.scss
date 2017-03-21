@@ -10,17 +10,14 @@
     // typography
     color: $darkBlue;
     font-family: $mainFont;
-    // border: 1px solid red;
 
     // @include clearfix;
-
-    // visual
-    // background-color: $justSand;
+    // border: 1px solid red;
 
     &--alt {
         .shop-item__image {
             // box model
-            float: right;
+            // float: right;
         }
 
         .shop-item__description {
@@ -28,6 +25,14 @@
             // float:left;
             // padding-right: 0px;
             // padding-left: 0;
+        }
+
+        .shop-item__description {
+            // box model
+            margin: 0 auto;
+            padding-left: 40px;
+            width: 1000px;
+            padding-right: 400px;
         }
     }
 
@@ -50,9 +55,10 @@
             position: absolute;
             top: -70px;
             left: -480px;
+            z-index: 4;
 
             // visual
-            background-image: url('../../assets/img/b1_clay_j.jpg');
+            background-image: url('../../assets/img/b1_clay_j.png');
         }
 
         .shop-item--oil & {
@@ -62,10 +68,10 @@
             position: absolute;
             top: -50px;
             right: -400px;
-            z-index: -2;
+            z-index: 4;
 
             // visual
-            background-image: url('../../assets/img/b2_oil_j.jpg');
+            background-image: url('../../assets/img/b2_oil_j.png');
         }
 
         .shop-item--pomade & {
@@ -75,9 +81,10 @@
             position: absolute;
             top: -50px;
             left: -500px;
+            z-index: 4;
 
             // visual
-            background-image: url('../../assets/img/b3_pomade_j.jpg');
+            background-image: url('../../assets/img/b3_pomade_j.png');
         }
 
         .shop-item--soap & {
@@ -89,7 +96,7 @@
             right: -460px;
 
             // visual
-            background-image: url('../../assets/img/b4_soap_j.jpg');
+            background-image: url('../../assets/img/b4_soap_j.png');
         }
     }
 
@@ -107,7 +114,7 @@
             // positioning
             position: absolute;
             top: 80px;
-            right: -400px;
+            right: -500px;
             z-index: -1;
 
             // box model
@@ -115,7 +122,7 @@
             width: 885px;
 
             // visual
-            background-image: url('../../assets/img/clay-right.jpg');
+            background-image: url('../../assets/img/clay-right.png');
         }
 
         .shop-item--oil & {
@@ -132,7 +139,7 @@
             width: 671px;
 
             // visual
-            background-image: url('../../assets/img/oil-left.jpg');
+            background-image: url('../../assets/img/oil-left.png');
         }
 
         .shop-item--pomade & {
@@ -140,8 +147,8 @@
 
             // positioning
             position: absolute;
-            top: -20px;
-            right: -460px;
+            top: 20px;
+            right: -510px;
             z-index: -1;
 
             // box model
@@ -150,7 +157,7 @@
             // border: 1px solid red;
 
             // visual
-            background-image: url('../../assets/img/pomade-right.jpg');
+            background-image: url('../../assets/img/pomade-right.png');
         }
 
         .shop-item--soap & {
@@ -167,20 +174,69 @@
             width: 974px;
 
             // visual
-            background-image: url('../../assets/img/soap-left.jpg')
+            background-image: url('../../assets/img/soap-left.png')
         }
     }
 
     &__description {
+        // positioning
+        position: relative;
+        // z-index: 2;
+
         // box model
+        padding: 50px 40px;
         // float: right;
         // width: 65%;
         // width: 600px;
+        margin-left: -400px;
+        padding-left: 400px;
+
+        // visual
+        // background-color: #ffffff;
+        // border: 1px solid red;
+
+        &::before {
+            content: "";
+
+            // positioning
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -3;
+
+            // box model
+            height: 100%;
+            width: 100%;
+
+            // visual
+            background-color: #ffffff;
+            // background-color: rgba(#ffffff, 0.87);
+        }
+
+        &::after {
+            content: "";
+
+            // positioning
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -3;
+
+            // box model
+            height: 100%;
+            width: 100%;
+
+            // visual
+            border: 1px solid $justSand;
+        }
     }
 
     &__title {
         // box model
-        padding-left: 0px;
+        // padding: 40px;
+        // padding-bottom: 0;
+        // margin-top: 10px;
+        margin-top: 0;
 
         // typography
         // color: $darkBlue;
@@ -202,6 +258,10 @@
     }
 
     &__buttons {
+        // positioning
+        position: relative;
+        z-index: 5;
+
         // box model
         padding-left: 25px;
         padding-top: 40px;

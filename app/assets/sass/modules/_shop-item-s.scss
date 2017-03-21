@@ -1,0 +1,17 @@
+.shop-item-s {
+    // box model
+    // display: inline-block;
+    height: 480px;
+    width: 330px;
+    margin-bottom: 60px;
+    border: 1px solid $justSand;
+
+    // visual
+    background-color: #ffffff;
+
+    &__image {
+        // box model
+        height: 330px;
+        border: 1px solid red;
+    }
+}

@@ -14,6 +14,7 @@
     // visual
     background-color: #2e2030;
     overflow: hidden;
+    box-shadow: 0 0 17px 3px #212121;
 
     &--about {
         // box model
@@ -31,22 +32,15 @@
 
     &__text-content {
         position: absolute;
-        // z-index: 999;
-        // top: 0;
         right: 65px;
         bottom: 130px;
-        // bottom: 14em;    
-        // bottom: 0;
-
-        // typography
-        text-align: right;
 
         // visual
         background-color: $darkGrey;
         background-color: rgba($darkGrey, 0.7);
         border: 1px solid #373025;
         border: 3px double rgba($darkSand, 0.2);
-        border: 3px double #373025;
+        border: 3px double $darkestSand;
         padding: 40px;
 
         &::before {
@@ -63,7 +57,6 @@
             width: 600px;
 
             // visual
-            // border: 1px solid red;
             background-image: url("../../assets/img/hero-deco-up.png");
         }
 
@@ -98,7 +91,7 @@
         // typography
         color: #ffffff;
         color: $justSand;
-        color: transparent;
+        -webkit-text-fill-color: transparent;
         // color: $darkSand;
         font-family: $captionFont;
         font-size: 3rem;

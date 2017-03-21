@@ -1,0 +1,127 @@
+.form {
+    // positioning
+    position: relative;
+
+    // box model
+    margin: 0 auto;
+    padding: 60px 100px;
+    width: 1000px;
+
+    // typography
+    text-align: center;
+
+    // visual
+    background-color: rgba($darkGrey, 0.54);
+    border: 3px double $darkestSand;
+    border: 3px double $darkSand;
+
+    &::before {
+        content: "";
+
+        // positioning
+        position: absolute;
+        top: -3px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        // box model
+        height: 24px;
+        width: 600px;
+
+        // visual
+        background-image: url("../../assets/img/hero-deco-up.png");
+    }
+
+    &::after {
+        content: "";
+
+        // positioning
+        position: absolute;
+        bottom: -3px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        // box model
+        height: 24px;
+        width: 600px;
+
+        // visual
+        background-image: url("../../assets/img/hero-deco-down.png");
+    }
+
+    &__fieldset {
+        // visual
+        border: none;
+    }
+
+    &__legend {
+        // box model
+        padding-bottom: 20px;
+
+        // typography
+        color: $darkSand;
+        -webkit-text-fill-color: transparent;
+        font-family: $captionFont;
+        font-size: 2rem;
+        text-align: center;
+
+        // visual
+        background-image: -webkit-linear-gradient($justSand, #5d4f34);
+        -webkit-background-clip: text;
+    }
+
+    &__input-group {
+        // positioning
+        position: relative;
+
+        // box model
+        padding-bottom: 20px;
+        padding-left: 70px;
+    }
+
+    &__label {
+        // positioning
+        position: absolute;
+        left: 12px;
+        top: 4px;
+        z-index: 1;
+
+        // box model
+        display: block;
+
+        // typography
+        color: $darkSand;
+        font-family: "BWIcons";
+        font-size: 3rem;
+        line-height: 1;
+        // border: 1px solid red;
+    }
+
+    &__input {
+        // box model
+        // margin-left: 20px;
+        padding: 15px;
+        padding-left: 20px;
+        width: 100%;
+
+        // typography
+        color: $darkSand;
+        font-family: $mainFont;
+        font-size: 1.25rem;
+        font-weight: 300;
+
+        // visual
+        border: none;
+        background-color: rgba($darkGrey, 0.54);
+        border: 1px solid rgba($darkSand, 0.54);
+        border-radius: 5px;
+        transition: all 0.3s ease-out;
+
+        &:focus {
+            // visual
+            background-color: rgba($darkGrey, 0.67);
+            outline: none;
+            border: 1px solid $darkSand;
+        }
+    }
+}

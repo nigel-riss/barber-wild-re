@@ -3,6 +3,9 @@
     display: inline-block;
     vertical-align: top;
     width: 300px;
+    margin: 20px;
+    
+    // border: 1px solid red;
 
     // typography
     color: $darkBlue;
@@ -11,10 +14,14 @@
 
     &__title {
         // typography
+        // font-size: 2.2rem;
+        font-size: 1.25rem;
+        font-weight: 700;
     }
 
     &__text {
         // typography
+        font-size: 1.125rem;
         line-height: 1.4;
         font-weight: 300;
     }
