@@ -1,17 +1,146 @@
 .shop-item-s {
+    // positioning
+    position: relative;
+
     // box model
     // display: inline-block;
-    height: 480px;
+    box-sizing: border-box;
+    height: 460px;
     width: 330px;
+    padding-top: 330px;
     margin-bottom: 60px;
     border: 1px solid $justSand;
 
     // visual
     background-color: #ffffff;
+    transition: all 0.3s ease-out;
+    overflow: hidden;
 
     &__image {
+        // positioning
+        position: absolute;
+        top: 0;
+        left: -35px;
+
         // box model
-        height: 330px;
-        border: 1px solid red;
+        width: 400px;
+        // border: 1px solid blue;
+
+        // typography
+        text-align: center;
+
+        // visual
+        transition: all 0.3s ease-out;
+
+        img {
+            // box model
+            height: 400px;
+            width: 400px;
+
+            // visual
+            transition: all 0.3s ease-out;
+        }
+    }
+
+    &__description {
+        // positioning
+        position: relative;
+
+        // box model
+        padding: 0 30px;
+        height: 150px;
+
+        // visual
+        // background-color: #ffffff;
+    }
+
+    &__title {
+        // box model
+        margin: 0;
+
+        // typography
+        color: $darkBlue;
+        font-family: $mainFont;
+        font-size: 1.25rem;
+        font-weight: 400;
+        line-height: 1.4;
+
+        // visual
+        pointer-events: none;
+    }
+
+    &__volume {
+        // typography
+        color: $darkBlue;
+        font-family: $mainFont;
+        font-size: 1.125rem;
+        font-weight: 300;
+
+        // visual
+        pointer-events: none;
+    }
+
+    &__buttons {
+        // positioning
+        position: relative;
+        top: 120px;
+        // border: 1px solid red;
+
+        // box model
+        padding-top: 20px;
+        width: 460px;
+        transition: all 0.4s ease-out;
+
+        // visual
+        opacity: 0;
+    }
+
+    &:hover {
+        // positioning
+        z-index: 5;
+        // position: absolute;
+
+        // box model
+        height: 550px;
+        width: 460px;
+        margin-bottom: -80px;
+        margin-left: -40px;
+        margin-right: -40px;
+        margin-top: -40px;
+
+        // visual
+        // overflow: visible;
+
+        .shop-item-s__image {
+            // positioning
+            top: -20px;
+
+            // box model
+            width: 530px;
+
+            img {
+                // box model
+                height: 460px;
+                width: 460px;
+            }
+        }
+
+        .shop-item-s__description {
+            // box model
+            height: 200px;
+
+            // border: 1px solid red;
+        }
+
+        .shop-item-s__buttons {
+            // positioning
+            top: 0;
+
+            // visual
+            opacity: 1;
+        }
+
+        // visual
+        box-shadow: 0 0 14px 0 rgba($darkestSand, 0.54);
     }
 }

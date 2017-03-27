@@ -1,0 +1,130 @@
+.item {
+    &__header {
+        // positioning
+        position: relative;
+
+        // box model
+        margin-bottom: 40px;
+        margin-left: 100px;
+        padding: 40px;
+        padding-left: 45%;
+
+        // visual
+        background-color: #ffffff;
+        border: 1px solid $justSand;
+    }
+
+    &__image {
+        // positioning
+        position: absolute;
+        top: -40px;
+        top: -10px;
+        left: 0;
+
+        // box model
+        // border: 1px solid red;
+
+        img {
+            // box model
+            height: 400px;
+            width: 400px;
+        }
+    }
+
+    &__title {
+        // typography
+        color: $darkBlue;
+        font-family: $mainFont;
+        font-weight: 300;
+        line-height: 1.4;
+    }
+
+    &__volume {
+        // typography
+        color: $darkSand;
+        font-family: $mainFont;
+        font-size: 1.125rem;
+    }
+
+    &__price {
+        // box model
+        margin: 0;
+        padding: 0;
+        padding-bottom: 20px;
+
+        // typography
+        color: $darkBlue;
+        font-family: $mainFont;
+        font-size: 3rem;
+    }
+
+    &__description {
+        // box model
+        margin-left: 100px;
+        // margin-right: -100px;
+        padding: 80px;
+        padding-left: 120px;
+
+        // visual
+        background-color: #ffffff;
+        border: 1px solid $justSand;
+    }
+
+
+    &__subheading {
+        // box model
+        margin: 0;
+        padding: 0;
+        padding-left: 60px;
+
+        // typography
+        font-family: $mainFont;
+        font-size: 2rem;
+        font-weight: 300;
+    }
+
+    &__text {
+        // typography
+        font-family: $mainFont;
+        font-weight: 300;
+        font-size: 1.25rem;
+        line-height: 1.6;
+        text-indent: 3em;
+        text-indent: 60px;
+    }
+
+    &__ingredients {
+        // positioning
+        position: relative;
+        left: -120px;
+
+
+        // box model
+        margin: 40px;
+        margin-left: -120px;
+        margin-right: -80px;
+        padding: 40px;
+        padding-left: 50%;
+
+        // visual
+        background-color: #ffffff;
+        border: 1px solid $justSand;
+        box-shadow: 0 0 14px 0 rgba($darkestSand, 0.54);
+        overflow: hidden;
+    }
+
+    &__ingredients-deco {
+        // positioning
+        position: absolute;
+        left: 0;
+        top: -80px;
+
+        // box model
+        height: 510px;
+        width: 376px;
+        // border: 1px solid red;
+
+        // visual
+        background-image: url('../../assets/img/ingredients-deco.png');
+    }
+}

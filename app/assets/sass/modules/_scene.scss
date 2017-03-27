@@ -14,15 +14,21 @@
     // background-attachment: fixed;
 
     &--about {
+        // box model
+        // height: 500px;
+
         // visual
         background-image: url('../../assets/img/about-bg.jpg');
         // background-position: center top;
         // background-position: center -50px;
-        background-position: center center;
+        background-position: left top;
         background-size: 100%;
     }
 
     &--partners {
+        // box model
+        // height: 500px;
+
         // visual
         background-image: url('../../assets/img/partners-bg.jpg');
     }
