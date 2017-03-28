@@ -32,6 +32,7 @@
         background-color: $darkSand;
         box-shadow: 2px 4px 14px 0 rgba($darkestSand, 0.45),
          inset 0 0 1px 0 rgba($darkSand, 0.44);
+        border-radius: 2px;
 
         &::before {
             // positioning
@@ -54,16 +55,26 @@
     }
 
     &--red {
+        // positioning
+        position: relative;
+
         // typography
         color: #ffffff;
 
         // visual
         background-color: $accentRed;
+        // background-color: #ff6f5f;
         box-shadow: 2px 2px 5px 0 rgba(#350100, 0.45),
             inset 0 0 32px 0 rgba(#350100, 0.1);
 
         &:hover {
+            // box model
+            // height: 60px;
+            // margin-top: -6px;
+
             // visual
+            background-color: #860d00;
+            background-color: #590900;
             box-shadow: 2px 4px 14px 0 rgba(#350100, 0.45),
                  inset 0 0 32px 0 rgba(#350100, 0.1);
         }

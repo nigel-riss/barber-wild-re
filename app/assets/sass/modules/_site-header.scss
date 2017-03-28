@@ -1,6 +1,7 @@
 .site-header {
     // positioning
     position: absolute;
+    position: fixed;
     top: 0;
     z-index: 10;
 
@@ -10,12 +11,13 @@
     // padding-left: 355px;
 
     // typography
-    text-align: center;
+    // text-align: center;
     // text-align: right;
 
 
     // visual
     background-color: $darkGrey;
+    // background-color: rgba($darkGrey, 0.9);
     // border-bottom: 3px double $justGrey;
     // border-bottom: 1px solid rgba($darkSand, 0.5);
     // border-bottom: 3px double rgba($darkSand, 0.5);
@@ -54,10 +56,13 @@
         // box model
         height: 3px;
         width: 100%;
+        // border: 1px solid red;
 
         // visual
         border-top: 1px solid #373025;
         border-bottom: 1px solid #373025;
+        border-top: 1px solid rgba($darkSand, 0.5);
+        border-bottom: 1px solid rgba($darkSand, 0.5);
     }
 
     &::after {
@@ -75,6 +80,8 @@
         // visual
         border-top: 1px solid #373025;
         border-bottom: 1px solid #373025;
+        border-top: 1px solid rgba($darkSand, 0.5);
+        border-bottom: 1px solid rgba($darkSand, 0.5);
     }
 
     &__logo {
@@ -82,6 +89,7 @@
         position: absolute;
         top: 15px;
         left: 50px;
+        z-index: 11;
 
         // box model
         height: 29px;
