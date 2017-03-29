@@ -467,14 +467,15 @@ body {
     border-bottom: 1px solid rgba(201, 170, 113, 0.5); }
   .site-header__logo {
     position: absolute;
-    top: 15px;
+    top: 16px;
     left: 50px;
     z-index: 11;
     height: 29px;
     width: 241px;
     font-size: 0;
     background-image: url("../../assets/img/logo.png");
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    background-size: 100%; }
 
 .main-nav {
   position: relative;
