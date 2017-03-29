@@ -895,13 +895,16 @@ body {
       border: 1px solid #c9aa71;
       border-radius: 32px; }
   .button--right-m {
-    margin-right: 40px; }
+    margin-right: 40px;
+    margin-left: 110px; }
   .button--red {
     position: relative;
     color: #ffffff;
+    display: none;
     background-color: #d11500;
     box-shadow: 2px 2px 5px 0 rgba(53, 1, 0, 0.45), inset 0 0 32px 0 rgba(53, 1, 0, 0.1); }
     .button--red:hover {
+      display: none;
       background-color: #860d00;
       background-color: #590900;
       box-shadow: 2px 4px 14px 0 rgba(53, 1, 0, 0.45), inset 0 0 32px 0 rgba(53, 1, 0, 0.1); }
