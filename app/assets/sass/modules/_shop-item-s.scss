@@ -3,18 +3,29 @@
     position: relative;
 
     // box model
-    // display: inline-block;
     box-sizing: border-box;
     height: 460px;
     width: 330px;
     padding-top: 330px;
     margin-bottom: 60px;
-    border: 1px solid $justSand;
 
-    // visual
-    background-color: #ffffff;
-    transition: all 0.3s ease-out;
-    overflow: hidden;
+    &__wrap {
+        // positioning
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        // box model
+        height: 460px;
+        width: 330px;
+        padding-top: 330px;
+
+        // visual
+        background-color: #ffffff;
+        border: 1px solid $justSand;
+        overflow: hidden;
+        transition: all 0.3s ease-out;
+    }
 
     &__image {
         // positioning
@@ -24,7 +35,6 @@
 
         // box model
         width: 400px;
-        // border: 1px solid blue;
 
         // typography
         text-align: center;
@@ -49,9 +59,6 @@
         // box model
         padding: 0 30px;
         height: 150px;
-
-        // visual
-        // background-color: #ffffff;
     }
 
     &__title {
@@ -84,32 +91,30 @@
         // positioning
         position: relative;
         top: 120px;
-        // border: 1px solid red;
 
         // box model
         padding-top: 20px;
-        width: 460px;
-        transition: all 0.4s ease-out;
+        width: 400px;
+        transition: all 0.4s linear 0.1s;
+
+        // typography
+        text-align: center;
 
         // visual
         opacity: 0;
     }
 
     &:hover {
-        // positioning
-        z-index: 5;
-        // position: absolute;
+        .shop-item-s__wrap {
+            // positioning
+            z-index: 5;
+            top: -40px;
+            left: -50px;
 
-        // box model
-        height: 550px;
-        width: 460px;
-        margin-bottom: -80px;
-        margin-left: -40px;
-        margin-right: -40px;
-        margin-top: -40px;
-
-        // visual
-        // overflow: visible;
+            // box model
+            height: 550px;
+            width: 460px;
+        }
 
         .shop-item-s__image {
             // positioning
@@ -128,8 +133,6 @@
         .shop-item-s__description {
             // box model
             height: 200px;
-
-            // border: 1px solid red;
         }
 
         .shop-item-s__buttons {

@@ -51,21 +51,15 @@
 
     &--right-m {
         // box model
-        margin-right: 40px;
-        margin-left:110px;
-
-
+        // margin-right: 40px;
     }
 
     &--red {
         // positioning
         position: relative;
-  
+
         // typography
         color: #ffffff;
-        
-       	 //hidden element
-        	display:none;
 
         // visual
         background-color: $accentRed;
@@ -77,8 +71,6 @@
             // box model
             // height: 60px;
             // margin-top: -6px;
-            	//hidden element
-            	display:none;
 
             // visual
             background-color: #860d00;
