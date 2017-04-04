@@ -1193,3 +1193,16 @@ button.button {
   height: 510px;
   width: 376px;
   background-image: url("../../assets/img/ingredients-deco.png"); }
+
+.partners {
+  text-align: center; }
+  .partners__item {
+    display: inline-block;
+    margin: 0 20px;
+    width: 265px;
+    opacity: 0.9;
+    transition: opacity 0.3s ease-out; }
+    .partners__item:hover {
+      opacity: 0.7; }
+  .partners img {
+    width: 100%; }
