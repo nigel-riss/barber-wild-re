@@ -593,7 +593,38 @@ body {
     color: #c9aa71;
     font-family: "Intro", sans-serif;
     font-size: 1rem;
-    text-decoration: none; }
+    text-decoration: none;
+    transition: all 0.25s ease-out; }
+    .cart a:hover {
+      color: #e9dcca; }
+      .cart a:hover::before {
+        opacity: 1; }
+    .cart a.current {
+      color: #e9dcca;
+      cursor: default; }
+      .cart a.current::before {
+        content: "";
+        position: absolute;
+        top: 1px;
+        left: 50%;
+        transform: translateX(165%);
+        z-index: 1;
+        height: 24px;
+        width: 600px;
+        background-image: url("../../assets/img/menu-deco-up.png");
+        opacity: 1;
+        pointer-events: none; }
+      .cart a.current::after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 50%;
+        transform: translateX(165%);
+        z-index: 1;
+        height: 24px;
+        width: 600px;
+        background-image: url("../../assets/img/menu-deco-down.png");
+        pointer-events: none; }
 
 .hero {
   position: relative;
