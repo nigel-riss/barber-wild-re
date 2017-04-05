@@ -3,98 +3,119 @@
     position: relative;
 
     // box model
-    margin: 0 auto;
-    padding-bottom: 200px;
-    width: 600px;
+    margin: 0 10px;
+    margin-bottom: 40px;
+    padding: 20px 30px;
 
     // typography
     color: $darkBlue;
     font-family: $mainFont;
+    text-align: center;
 
-    // @include clearfix;
-    // border: 1px solid red;
+    // visual
+    background-color: #ffffff;
+    border: 1px solid $justSand;
+
+    @include atDesktop {
+        // box model
+        margin: 0 auto;
+        width: 600px;
+        padding: 0;
+        padding-bottom: 200px;
+
+        // typography
+        text-align: left;
+
+        // visual
+        background-color: transparent;
+        border: none;
+    }
 
     &--alt {
-        .shop-item__image {
-            // box model
-            // float: right;
-        }
-
-        .shop-item__description {
-            // box model
-            // float:left;
-            // padding-right: 0px;
-            // padding-left: 0;
-        }
-
-        .shop-item__description {
-            // box model
-            margin: 0 auto;
-            padding-left: 40px;
-            width: 1000px;
-            padding-right: 400px;
+        @include atDesktop {
+            .shop-item__description {
+                // box model
+                margin: 0 auto;
+                padding-left: 40px;
+                width: 1000px;
+                padding-right: 400px;
+            }
         }
     }
 
     &__image {
         // positioning
-        position: absolute;
         z-index: -1;
 
         // box model
-        height: 600px;
-        width: 600px;
+        display: inline-block;
+        width: 300px;
+        height: 300px;
+        margin: 0 -30px;
+        // border: 1px solid red;
 
         // visual
         background-repeat: no-repeat;
+        background-size: 100%;
 
-        .shop-item--clay & {
-            content: "";
-            
+        @include atDesktop {
             // positioning
             position: absolute;
-            top: -70px;
-            left: -480px;
-            z-index: 4;
 
+            // box model
+            height: 600px;
+            width: 600px;
+            margin: 0;
+
+
+            .shop-item--clay & {
+                // positioning
+                position: absolute;
+                top: -70px;
+                left: -480px;
+                z-index: 4;
+            }
+
+            .shop-item--oil & {
+                // positioning
+                position: absolute;
+                top: -50px;
+                right: -400px;
+                z-index: 4;
+            }
+
+            .shop-item--pomade & {
+                // positioning
+                position: absolute;
+                top: -50px;
+                left: -500px;
+                z-index: 4;
+            }
+
+            .shop-item--soap & {
+                // positioning
+                position: absolute;
+                top: -70px;
+                right: -460px;
+            }
+        }
+
+        .shop-item--clay & {
             // visual
             background-image: url('../../assets/img/b1_clay_j.png');
         }
 
         .shop-item--oil & {
-            content: "";
-
-            // positioning
-            position: absolute;
-            top: -50px;
-            right: -400px;
-            z-index: 4;
-
             // visual
             background-image: url('../../assets/img/b2_oil_j.png');
         }
 
         .shop-item--pomade & {
-            content: "";
-
-            // positioning
-            position: absolute;
-            top: -50px;
-            left: -500px;
-            z-index: 4;
-
             // visual
             background-image: url('../../assets/img/b3_pomade_j.png');
         }
 
         .shop-item--soap & {
-            content: "";
-
-            // positioning
-            position: absolute;
-            top: -70px;
-            right: -460px;
-
             // visual
             background-image: url('../../assets/img/b4_soap_j.png');
         }
@@ -105,12 +126,18 @@
         // positioning
         position: relative;
 
+        // box model
+        display: none;
+
         // visual
         background-repeat: no-repeat;
 
+        @include atDesktop {
+            // box model
+            display: block;
+        }
+
         .shop-item--clay & {
-            content: "";
-            
             // positioning
             position: absolute;
             top: 80px;
@@ -126,8 +153,6 @@
         }
 
         .shop-item--oil & {
-            content: "";
-
             // positioning
             position: absolute;
             top: -150px;
@@ -143,8 +168,6 @@
         }
 
         .shop-item--pomade & {
-            content: "";
-
             // positioning
             position: absolute;
             top: 20px;
@@ -161,8 +184,6 @@
         }
 
         .shop-item--soap & {
-            content: "";
-
             // positioning
             position: absolute;
             top: -130px;
@@ -181,19 +202,17 @@
     &__description {
         // positioning
         position: relative;
-        // z-index: 2;
 
         // box model
-        padding: 50px 40px;
-        // float: right;
-        // width: 65%;
-        // width: 600px;
-        margin-left: -400px;
-        padding-left: 400px;
+        // padding: 20px;
+        padding-bottom: 20px;
 
-        // visual
-        // background-color: #ffffff;
-        // border: 1px solid red;
+        @include atDesktop {
+            // box model
+            padding: 50px 40px;
+            margin-left: -400px;
+            padding-left: 400px;
+        }
 
         &::before {
             content: "";
@@ -210,7 +229,6 @@
 
             // visual
             background-color: #ffffff;
-            // background-color: rgba(#ffffff, 0.87);
         }
 
         &::after {
@@ -233,28 +251,36 @@
 
     &__title {
         // box model
-        // padding: 40px;
-        // padding-bottom: 0;
-        // margin-top: 10px;
         margin-top: 0;
 
         // typography
-        // color: $darkBlue;
-        font-size: 3rem;
-        font-weight: 300;
+        font-size: 1.5rem;
+        font-weight: 400;
         line-height: 1.4;
-        text-indent: 20px;
+
+        @include atDesktop {
+            // typography
+            font-size: 3rem;
+            font-weight: 300;
+            text-indent: 20px;
+        }
     }
 
     &__text {
-        // box model
-        padding-left: 25px;
 
         // typography
-        // color: $darkBlue;
-        font-size: 1.125rem;
+        font-size: 1rem;
         font-weight: 300;
         line-height: 1.4;
+        text-align: left;
+
+        @include atDesktop {
+            // box model
+            padding-left: 25px;
+
+            // typography
+            font-size: 1.125rem;
+        }
     }
 
     &__buttons {
@@ -263,7 +289,11 @@
         z-index: 5;
 
         // box model
-        padding-left: 25px;
         padding-top: 40px;
+
+        @include atDesktop {
+            // box model
+            padding-left: 25px;
+        }
     }
 }

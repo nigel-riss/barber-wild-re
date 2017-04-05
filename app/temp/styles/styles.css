@@ -427,20 +427,15 @@ body {
   font-size: 16px;
   background-color: #fffaf0; }
 
-.wrapper {
-  width: 1080px;
-  margin: 0 auto; }
-  .wrapper--flex {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; }
+@media (min-width: 1200px) {
+  .wrapper {
+    width: 1080px;
+    margin: 0 auto; } }
 
-.empty {
-  margin-top: 60px;
-  margin-bottom: 60px;
-  width: 100%;
-  height: 200px;
-  border: 1px solid red; }
+.wrapper--flex {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; }
 
 .site-header {
   position: absolute;
@@ -486,8 +481,12 @@ body {
 
 .main-nav {
   position: relative;
+  display: none;
   padding-left: 360px;
   font-size: 0; }
+  @media (min-width: 1200px) {
+    .main-nav {
+      display: block; } }
   .main-nav ul {
     margin: 0;
     padding: 0;
@@ -585,7 +584,10 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  display: inline-block; }
+  display: none; }
+  @media (min-width: 1200px) {
+    .cart {
+      display: inline-block; } }
   .cart a {
     display: block;
     padding: 15px 30px;
@@ -758,13 +760,12 @@ body {
     margin: 0;
     padding: 0;
     color: rgba(21, 32, 38, 0.84);
-    color: transparent;
     font-family: "Intro", sans-serif;
-    font-size: 2.5rem;
-    line-height: 1;
-    background-image: -webkit-linear-gradient(#152026, #5d4f34);
-    -webkit-background-clip: text;
-    opacity: 0.9; }
+    font-size: 1.5rem;
+    line-height: 1; }
+    @media (min-width: 1200px) {
+      .site-section__title {
+        font-size: 2.5rem; } }
   .site-section--selling-features {
     text-align: center; }
 
@@ -784,54 +785,78 @@ body {
 
 .shop-item {
   position: relative;
-  margin: 0 auto;
-  padding-bottom: 200px;
-  width: 600px;
+  margin: 0 10px;
+  margin-bottom: 40px;
+  padding: 20px 30px;
   color: #152026;
-  font-family: "Roboto Slab", serif; }
-  .shop-item--alt .shop-item__description {
-    margin: 0 auto;
-    padding-left: 40px;
-    width: 1000px;
-    padding-right: 400px; }
+  font-family: "Roboto Slab", serif;
+  text-align: center;
+  background-color: #ffffff;
+  border: 1px solid #e9dcca; }
+  @media (min-width: 1200px) {
+    .shop-item {
+      margin: 0 auto;
+      width: 600px;
+      padding: 0;
+      padding-bottom: 200px;
+      text-align: left;
+      background-color: transparent;
+      border: none; } }
+  @media (min-width: 1200px) {
+    .shop-item--alt .shop-item__description {
+      margin: 0 auto;
+      padding-left: 40px;
+      width: 1000px;
+      padding-right: 400px; } }
   .shop-item__image {
-    position: absolute;
     z-index: -1;
-    height: 600px;
-    width: 600px;
-    background-repeat: no-repeat; }
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    margin: 0 -30px;
+    background-repeat: no-repeat;
+    background-size: 100%; }
+    @media (min-width: 1200px) {
+      .shop-item__image {
+        position: absolute;
+        height: 600px;
+        width: 600px;
+        margin: 0; }
+        .shop-item--clay .shop-item__image {
+          position: absolute;
+          top: -70px;
+          left: -480px;
+          z-index: 4; }
+        .shop-item--oil .shop-item__image {
+          position: absolute;
+          top: -50px;
+          right: -400px;
+          z-index: 4; }
+        .shop-item--pomade .shop-item__image {
+          position: absolute;
+          top: -50px;
+          left: -500px;
+          z-index: 4; }
+        .shop-item--soap .shop-item__image {
+          position: absolute;
+          top: -70px;
+          right: -460px; } }
     .shop-item--clay .shop-item__image {
-      content: "";
-      position: absolute;
-      top: -70px;
-      left: -480px;
-      z-index: 4;
       background-image: url("../../assets/img/b1_clay_j.png"); }
     .shop-item--oil .shop-item__image {
-      content: "";
-      position: absolute;
-      top: -50px;
-      right: -400px;
-      z-index: 4;
       background-image: url("../../assets/img/b2_oil_j.png"); }
     .shop-item--pomade .shop-item__image {
-      content: "";
-      position: absolute;
-      top: -50px;
-      left: -500px;
-      z-index: 4;
       background-image: url("../../assets/img/b3_pomade_j.png"); }
     .shop-item--soap .shop-item__image {
-      content: "";
-      position: absolute;
-      top: -70px;
-      right: -460px;
       background-image: url("../../assets/img/b4_soap_j.png"); }
   .shop-item__deco {
     position: relative;
+    display: none;
     background-repeat: no-repeat; }
+    @media (min-width: 1200px) {
+      .shop-item__deco {
+        display: block; } }
     .shop-item--clay .shop-item__deco {
-      content: "";
       position: absolute;
       top: 80px;
       right: -500px;
@@ -840,7 +865,6 @@ body {
       width: 885px;
       background-image: url("../../assets/img/clay-right.png"); }
     .shop-item--oil .shop-item__deco {
-      content: "";
       position: absolute;
       top: -150px;
       left: -520px;
@@ -849,7 +873,6 @@ body {
       width: 671px;
       background-image: url("../../assets/img/oil-left.png"); }
     .shop-item--pomade .shop-item__deco {
-      content: "";
       position: absolute;
       top: 20px;
       right: -510px;
@@ -858,7 +881,6 @@ body {
       width: 701px;
       background-image: url("../../assets/img/pomade-right.png"); }
     .shop-item--soap .shop-item__deco {
-      content: "";
       position: absolute;
       top: -130px;
       left: -450px;
@@ -868,9 +890,12 @@ body {
       background-image: url("../../assets/img/soap-left.png"); }
   .shop-item__description {
     position: relative;
-    padding: 50px 40px;
-    margin-left: -400px;
-    padding-left: 400px; }
+    padding-bottom: 20px; }
+    @media (min-width: 1200px) {
+      .shop-item__description {
+        padding: 50px 40px;
+        margin-left: -400px;
+        padding-left: 400px; } }
     .shop-item__description::before {
       content: "";
       position: absolute;
@@ -891,20 +916,30 @@ body {
       border: 1px solid #e9dcca; }
   .shop-item__title {
     margin-top: 0;
-    font-size: 3rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.4; }
+    @media (min-width: 1200px) {
+      .shop-item__title {
+        font-size: 3rem;
+        font-weight: 300;
+        text-indent: 20px; } }
+  .shop-item__text {
+    font-size: 1rem;
     font-weight: 300;
     line-height: 1.4;
-    text-indent: 20px; }
-  .shop-item__text {
-    padding-left: 25px;
-    font-size: 1.125rem;
-    font-weight: 300;
-    line-height: 1.4; }
+    text-align: left; }
+    @media (min-width: 1200px) {
+      .shop-item__text {
+        padding-left: 25px;
+        font-size: 1.125rem; } }
   .shop-item__buttons {
     position: relative;
     z-index: 5;
-    padding-left: 25px;
     padding-top: 40px; }
+    @media (min-width: 1200px) {
+      .shop-item__buttons {
+        padding-left: 25px; } }
 
 .button {
   position: relative;
@@ -991,6 +1026,17 @@ button.button {
   color: #152026;
   font-family: "Roboto Slab", serif;
   text-align: center; }
+  .feature__image {
+    display: inline-block;
+    height: 164px;
+    width: 164px; }
+    .feature__image img {
+      height: 100%;
+      width: 100%; }
+    @media (min-width: 1200px) {
+      .feature__image {
+        height: 246px;
+        width: 246px; } }
   .feature__title {
     font-size: 1.25rem;
     font-weight: 700; }
@@ -1001,38 +1047,53 @@ button.button {
 
 .form {
   position: relative;
-  margin: 0 auto;
-  padding: 60px 100px;
-  width: 1000px;
+  margin: 0 10px;
+  padding: 40px 20px;
   text-align: center;
   background-color: #ffffff;
   border: 1px solid #e9dcca; }
+  @media (min-width: 1200px) {
+    .form {
+      margin: 0 auto;
+      width: 1000px;
+      padding: 60px 100px; } }
   .form__fieldset {
     border: none; }
   .form__legend {
     padding-bottom: 40px;
     color: #152026;
     font-family: "Intro", sans-serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: center; }
+    @media (min-width: 1200px) {
+      .form__legend {
+        font-size: 2rem; } }
   .form__input-group {
     position: relative;
-    padding-bottom: 20px;
-    padding-left: 80px; }
+    padding-bottom: 20px; }
+    @media (min-width: 1200px) {
+      .form__input-group {
+        padding-left: 80px; } }
   .form__icon {
     position: absolute;
     left: 12px;
     top: 4px;
     z-index: 1;
-    display: block;
+    display: none;
     color: #c9aa71;
     font-family: "BWIcons";
     font-size: 3rem;
     line-height: 1; }
+    @media (min-width: 1200px) {
+      .form__icon {
+        display: block; } }
   .form__label {
     color: #152026;
     font-family: "Roboto Slab", serif;
-    font-size: 1.25rem; }
+    font-size: 1rem; }
+    @media (min-width: 1200px) {
+      .form__label {
+        font-size: 1.25rem; } }
   .form__input {
     padding: 15px;
     padding-left: 20px;
@@ -1055,37 +1116,52 @@ button.button {
 
 .shop-item-s {
   position: relative;
-  box-sizing: border-box;
-  height: 460px;
   width: 330px;
-  padding-top: 330px;
-  margin-bottom: 60px; }
+  margin-bottom: 40px; }
+  @media (min-width: 1200px) {
+    .shop-item-s {
+      height: 460px;
+      margin-bottom: 60px; } }
   .shop-item-s__wrap {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 460px;
+    position: relative;
     width: 330px;
-    padding-top: 330px;
+    padding-bottom: 20px;
     background-color: #ffffff;
     border: 1px solid #e9dcca;
     overflow: hidden;
     transition: all 0.3s ease-out; }
+    @media (min-width: 1200px) {
+      .shop-item-s__wrap {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 460px;
+        padding-bottom: 0;
+        padding-top: 330px; } }
   .shop-item-s__image {
-    position: absolute;
-    top: 0;
-    left: -35px;
-    width: 400px;
     text-align: center;
     transition: all 0.3s ease-out; }
     .shop-item-s__image img {
-      height: 400px;
-      width: 400px;
+      width: 100%;
       transition: all 0.3s ease-out; }
+      @media (min-width: 1200px) {
+        .shop-item-s__image img {
+          display: inline-block;
+          height: 400px;
+          width: 400px; } }
+    @media (min-width: 1200px) {
+      .shop-item-s__image {
+        position: absolute;
+        top: 0;
+        left: -35px;
+        width: 400px;
+        height: 400px; } }
   .shop-item-s__description {
     position: relative;
-    padding: 0 30px;
-    height: 150px; }
+    padding: 0 30px; }
+    @media (min-width: 1200px) {
+      .shop-item-s__description {
+        height: 150px; } }
   .shop-item-s__title {
     margin: 0;
     color: #152026;
@@ -1101,56 +1177,79 @@ button.button {
     font-weight: 300;
     pointer-events: none; }
   .shop-item-s__buttons {
-    position: relative;
-    top: 120px;
     padding-top: 20px;
-    width: 400px;
     transition: all 0.4s linear 0.1s;
-    text-align: center;
-    opacity: 0; }
-  .shop-item-s:hover {
-    box-shadow: 0 0 14px 0 rgba(55, 48, 37, 0.54); }
-    .shop-item-s:hover .shop-item-s__wrap {
-      z-index: 5;
-      top: -40px;
-      left: -50px;
-      height: 550px;
-      width: 460px; }
-    .shop-item-s:hover .shop-item-s__image {
-      top: -20px;
-      width: 530px; }
-      .shop-item-s:hover .shop-item-s__image img {
-        height: 460px;
+    text-align: center; }
+    @media (min-width: 1200px) {
+      .shop-item-s__buttons {
+        position: relative;
+        top: 120px;
+        width: 400px;
+        opacity: 0; } }
+  @media (min-width: 1200px) {
+    .shop-item-s:hover {
+      box-shadow: 0 0 14px 0 rgba(55, 48, 37, 0.54); }
+      .shop-item-s:hover .shop-item-s__wrap {
+        z-index: 5;
+        top: -40px;
+        left: -50px;
+        height: 550px;
         width: 460px; }
-    .shop-item-s:hover .shop-item-s__description {
-      height: 200px; }
-    .shop-item-s:hover .shop-item-s__buttons {
-      top: 0;
-      opacity: 1; }
+      .shop-item-s:hover .shop-item-s__image {
+        top: -20px;
+        width: 530px; }
+        .shop-item-s:hover .shop-item-s__image img {
+          height: 460px;
+          width: 460px; }
+      .shop-item-s:hover .shop-item-s__description {
+        height: 200px; }
+      .shop-item-s:hover .shop-item-s__buttons {
+        top: 0;
+        opacity: 1; } }
 
 .item__header {
   position: relative;
+  margin: 0 10px;
   margin-bottom: 40px;
-  margin-left: 100px;
-  padding: 40px;
-  padding-left: 45%;
+  padding: 40px 30px;
+  text-align: center;
   background-color: #ffffff;
   border: 1px solid #e9dcca; }
+  @media (min-width: 1200px) {
+    .item__header {
+      margin-left: 100px;
+      padding: 40px;
+      padding-left: 45%;
+      text-align: left; } }
 
 .item__image {
-  position: absolute;
-  top: -40px;
-  top: -10px;
-  left: 0; }
+  display: inline-block;
+  height: 300px;
+  width: 300px;
+  margin: 0 -30px; }
   .item__image img {
-    height: 400px;
-    width: 400px; }
+    height: 100%;
+    width: 100%; }
+  @media (min-width: 1200px) {
+    .item__image {
+      position: absolute;
+      top: -40px;
+      top: -10px;
+      left: 0;
+      margin: 0;
+      height: 400px;
+      width: 400px; } }
 
 .item__title {
   color: #152026;
   font-family: "Roboto Slab", serif;
-  font-weight: 300;
+  font-size: 1.5rem;
+  font-weight: 400;
   line-height: 1.4; }
+  @media (min-width: 1200px) {
+    .item__title {
+      font-size: 2rem;
+      font-weight: 300; } }
 
 .item__volume {
   color: #c9aa71;
@@ -1166,54 +1265,74 @@ button.button {
   font-size: 3rem; }
 
 .item__description {
-  margin-left: 100px;
-  padding: 80px;
-  padding-left: 120px;
+  margin: 0 10px;
+  padding: 40px 30px;
   background-color: #ffffff;
   border: 1px solid #e9dcca; }
+  @media (min-width: 1200px) {
+    .item__description {
+      margin-left: 100px;
+      padding: 80px;
+      padding-left: 120px; } }
 
 .item__subheading {
   margin: 0;
   padding: 0;
-  padding-left: 60px;
   font-family: "Roboto Slab", serif;
-  font-size: 2rem;
-  font-weight: 300; }
+  font-size: 1.5rem;
+  font-weight: 400; }
+  @media (min-width: 1200px) {
+    .item__subheading {
+      padding-left: 60px;
+      font-size: 2rem;
+      font-weight: 300; } }
 
 .item__text {
   font-family: "Roboto Slab", serif;
+  font-size: 1rem;
   font-weight: 300;
-  font-size: 1.25rem;
-  line-height: 1.6;
-  text-indent: 3em;
-  text-indent: 60px; }
+  line-height: 1.6; }
+  @media (min-width: 1200px) {
+    .item__text {
+      font-size: 1.25rem;
+      text-indent: 3em;
+      text-indent: 60px; } }
 
 .item__ingredients {
-  position: relative;
-  left: -120px;
-  margin: 40px;
-  margin-left: -120px;
-  margin-right: -80px;
-  padding: 40px;
-  padding-left: 50%;
-  background-color: #ffffff;
-  border: 1px solid #e9dcca;
-  box-shadow: 0 0 14px 0 rgba(55, 48, 37, 0.54);
-  overflow: hidden; }
+  padding-top: 20px; }
+  @media (min-width: 1200px) {
+    .item__ingredients {
+      position: relative;
+      left: -120px;
+      margin: 40px;
+      margin-left: -120px;
+      margin-right: -80px;
+      padding: 40px;
+      padding-left: 50%;
+      overflow: hidden;
+      background-color: #ffffff;
+      border: 1px solid #e9dcca;
+      box-shadow: 0 0 14px 0 rgba(55, 48, 37, 0.54); } }
 
 .item__ingredients-deco {
-  position: absolute;
-  left: 0;
-  top: -80px;
-  height: 510px;
-  width: 376px;
-  background-image: url("../../assets/img/ingredients-deco.png"); }
+  display: none; }
+  @media (min-width: 1200px) {
+    .item__ingredients-deco {
+      position: absolute;
+      left: 0;
+      top: -80px;
+      display: block;
+      height: 510px;
+      width: 376px;
+      background-image: url("../../assets/img/ingredients-deco.png"); } }
 
 .partners {
   text-align: center; }
   .partners__item {
     display: inline-block;
+    vertical-align: middle;
     margin: 0 20px;
+    margin-bottom: 20px;
     width: 265px;
     opacity: 0.9;
     transition: opacity 0.3s ease-out; }
@@ -1225,17 +1344,25 @@ button.button {
 .order-table {
   width: 100%;
   margin: 40px 0;
-  padding-left: 20px; }
+  margin-left: -20px; }
+  @media (min-width: 1200px) {
+    .order-table {
+      margin-left: 0;
+      padding-left: 20px; } }
   .order-table th {
     padding: 20px 10px;
     text-align: left;
-    font-family: "Roboto Slab", serif;
-    font-size: 1.25rem; }
+    font-size: 1rem;
+    font-family: "Roboto Slab", serif; }
+    @media (min-width: 1200px) {
+      .order-table th {
+        font-size: 1.25rem; } }
     .order-table th:nth-child(3n) {
       text-align: right; }
   .order-table td {
     padding: 5px 13px;
-    text-align: left; }
+    text-align: left;
+    font-size: 1rem; }
     .order-table td:nth-child(3n) {
       padding-right: 0;
       text-align: right; }

@@ -6,7 +6,7 @@
         right: 0;
 
         // box model
-        display: inline-block;
+        display: none;
         // width: 400px;
         // float: right;
         // padding: 15px 30px;
@@ -16,6 +16,11 @@
         // color: $darkSand;
         // font-family: $captionFont;
         // font-size: 1rem;
+
+        @include atDesktop {
+            // box model
+            display: inline-block;
+        }
 
         a {
             // box model

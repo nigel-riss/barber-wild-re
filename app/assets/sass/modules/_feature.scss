@@ -5,16 +5,32 @@
     width: 300px;
     margin: 20px;
     
-    // border: 1px solid red;
-
     // typography
     color: $darkBlue;
     font-family: $mainFont;
     text-align: center;
 
+    &__image {
+        // box model
+        display: inline-block;
+        height: 164px;
+        width: 164px;
+
+        img {
+            // box model
+            height: 100%;
+            width: 100%;
+        }
+
+        @include atDesktop {
+            // box model
+            height: 246px;
+            width: 246px;
+        }
+    }
+
     &__title {
         // typography
-        // font-size: 2.2rem;
         font-size: 1.25rem;
         font-weight: 700;
     }

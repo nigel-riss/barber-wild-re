@@ -19,7 +19,6 @@
 
             // positioning
             position: absolute;
-            // top: -10px;
             bottom: -10px;
             left: 50%;
             transform: translateX(-50%);
@@ -31,26 +30,6 @@
             // visual
             background-image: url("../../assets/img/header-deco.png");
         }
-
-        // &::after {
-        //     content: "";
-
-        //     // positioning
-        //     position: absolute;
-        //     bottom: 0px;
-        //     // top: 10px;
-        //     left: 50%;
-        //     transform: translateX(-50%);
-        //     z-index: 9999;
-
-        //     // box model
-        //     height: 24px;
-        //     width: 600px;
-
-        //     // visual
-        //     // border: 1px solid red;
-        //     background-image: url("../../assets/img/hero-deco-down.png");
-        // }
     }
 
     &__title {
@@ -60,15 +39,20 @@
 
         // typography
         color: rgba($darkBlue, 0.84);
-        color: transparent;
+        // color: transparent;
         font-family: $captionFont;
-        font-size: 2.5rem;
+        font-size: 1.5rem;
         line-height: 1;
 
         // visual
-        background-image: -webkit-linear-gradient($darkBlue, #5d4f34);
-        -webkit-background-clip: text;
-        opacity: 0.9;
+        // background-image: -webkit-linear-gradient($darkBlue, #5d4f34);
+        // -webkit-background-clip: text;
+        // opacity: 0.9;
+
+        @include atDesktop {
+            // typography
+            font-size: 2.5rem;
+        }
     }
 
     &--selling-features {

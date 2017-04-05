@@ -3,11 +3,17 @@
     position: relative;
 
     // box model
+    display: none;
     padding-left: 360px;
     // border: 1px solid red;
 
     // typography
     font-size: 0;
+
+    @include atDesktop {
+        // box model
+        display: block;
+    }
 
     ul {
         // box model
