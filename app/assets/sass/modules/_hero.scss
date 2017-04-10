@@ -2,38 +2,50 @@
     // positioning
     position: relative;
 
-    // box model
-    height: 46.7vw;
-    // height: 800px;
-    width: 100%;
-    margin-top: 48px;
-
     // typography
     font-size: 0;
 
     // visual
     background-color: #2e2030;
-    overflow: hidden;
-    // box-shadow: 0 0 17px 3px #212121;
 
-    &::after {
-        content: "";
-        // positioning
-        position: absolute;
-        bottom: 1px;
-        // top: 200px;
-        left: 0;
-        z-index: 9;
-
+    @include atDesktop {
         // box model
-        height: 60px;
+        height: 46.7vw;
         width: 100%;
+        margin-top: 48px;
 
         // visual
-        opacity: 0.8;
-        background-color: #212121;
-        border-top: 3px double rgba($darkSand, 0.7);
-        border-bottom: 3px double rgba($darkSand, 0.7);
+        overflow: hidden;
+
+        &::after {
+            content: "";
+            // positioning
+            position: absolute;
+            bottom: 1px;
+            left: 0;
+            z-index: 9;
+
+            // box model
+            height: 60px;
+            width: 100%;
+
+            // visual
+            opacity: 0.8;
+            background-color: #212121;
+            border-top: 3px double rgba($darkSand, 0.7);
+            border-bottom: 3px double rgba($darkSand, 0.7);
+        }
+    }
+
+
+    &__scene {
+        // box model
+        display: none;
+
+        @include atDesktop {
+            // box model
+            display: block;
+        }
     }
 
     &--about {
@@ -52,51 +64,53 @@
     }
 
     &__text-content {
-        position: absolute;
-        right: 65px;
-        bottom: 130px;
+        // box model
+        // display: none;
 
         // visual
-        background-color: $darkGrey;
         background-color: rgba($darkGrey, 0.7);
-        border: 1px solid #373025;
-        border: 3px double rgba($darkSand, 0.2);
-        border: 3px double $darkestSand;
         border: 3px double rgba($darkSand, 0.5);
         padding: 40px;
 
-        &::before {
-            content: "";
-
+        @include atDesktop {
             // positioning
             position: absolute;
-            top: -3px;
-            left: 50%;
-            transform: translateX(-50%);
+            right: 65px;
+            bottom: 130px;
 
-            // box model
-            height: 24px;
-            width: 600px;
+            &::before {
+                content: "";
 
-            // visual
-            background-image: url("../../assets/img/hero-deco-up.png");
-        }
+                // positioning
+                position: absolute;
+                top: -3px;
+                left: 50%;
+                transform: translateX(-50%);
 
-        &::after {
-            content: "";
+                // box model
+                height: 24px;
+                width: 600px;
 
-            // positioning
-            position: absolute;
-            bottom: -3px;
-            left: 50%;
-            transform: translateX(-50%);
+                // visual
+                background-image: url("../../assets/img/hero-deco-up.png");
+            }
 
-            // box model
-            height: 24px;
-            width: 600px;
+            &::after {
+                content: "";
 
-            // visual
-            background-image: url("../../assets/img/hero-deco-down.png");
+                // positioning
+                position: absolute;
+                bottom: -3px;
+                left: 50%;
+                transform: translateX(-50%);
+
+                // box model
+                height: 24px;
+                width: 600px;
+
+                // visual
+                background-image: url("../../assets/img/hero-deco-down.png");
+            }
         }
     }
 
@@ -109,36 +123,22 @@
         margin: 0;
         padding: 0;
         padding-bottom: 0.3em;
+        padding-top: 40px;
 
         // typography
-        color: #ffffff;
         color: $justSand;
-        -webkit-text-fill-color: transparent;
-        // color: $darkSand;
         font-family: $captionFont;
-        font-size: 3rem;
-        flex-wrap: 100;
+        font-size: 1.5rem;
+        line-height: 1.4;
         text-align: center;
 
-        // visual
-        background-image: -webkit-linear-gradient($justSand, #5d4f34);
-        -webkit-background-clip: text;
+        @include atDesktop {
+            // box model
+            padding-top: 0;
 
-        // &::before {
-        //     content: "О «Barber WILD»";
-
-        //     // positioning
-        //     position: absolute;
-        //     // top: 10px;
-        //     // left: 10px;
-        //     z-index: -3;
-            
-        //     // typography
-
-        //     // visual
-        //     border: 1px solid red;
-        //     text-shadow: 0 0 2px #ffffff;
-        // }
+            // typography
+            font-size: 3rem;
+        }
     }
 
     &__motto {
@@ -146,12 +146,21 @@
         margin: 0;
         padding: 0;
         padding-bottom: 0.75em;
+        padding-left: 0.4em;
 
         // typography
         color: $justSand;
-        // color: $darkSand;
         font-family: $captionFont;
-        font-size: 2rem;
+        font-size: 1rem;
+        line-height: 1.4;
+        text-indent: -1em;
+        text-align: center;
+
+        @include atDesktop {
+            // typography
+            font-size: 2rem;
+            text-align: center;
+        }
     }
 
     &__subtitle {
@@ -165,24 +174,34 @@
         // color: $darkSand;
         // color: #8c7b5e;
         font-family: $mainFont;
-        font-size: 1.25rem;
+        font-size: 1rem;
         font-weight: 300;
         text-align: center;
+
+        @include atDesktop {
+            // typography
+            font-size: 1.125rem;
+        }
     }
 
     &__text {
         // box model
-        width: 700px;
+        // width: 700px;
 
         // typography
         color: $justSand;
-        // color: $darkSand;
-        // color: #ffffff;
         font-family: $mainFont;
-        font-size: 1.125rem;
-        font-size: 1rem;
+        font-size: 0.875rem;
         font-weight: 300;
         line-height: 1.4;
         text-indent: 2em;
+
+        @include atDesktop {
+            // box model
+            width: 700px;
+
+            // typography
+            font-size: 1rem;
+        }
     }
 }

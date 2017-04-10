@@ -7,43 +7,15 @@
 
     // box model
     width: 100%;
-    height: 60px;
-    // padding-left: 355px;
-
-    // typography
-    // text-align: center;
-    // text-align: right;
-
+    height: 48px;
 
     // visual
     background-color: $darkGrey;
-    // background-color: rgba($darkGrey, 0.9);
-    // border-bottom: 3px double $justGrey;
-    // border-bottom: 1px solid rgba($darkSand, 0.5);
-    // border-bottom: 3px double rgba($darkSand, 0.5);
-    // border-bottom: 2px solid $darkSand;
-    // border-top: 2px solid $darkSand;
-    // border-bottom: 5px double #ffffff;
-    // opacity: 0.5;
-    // overflow: hidden;
 
-    // &::before {
-    //     content: "";
-
-    //     // positioning
-    //     position: absolute;
-    //     top: 48px;
-    //     left: 50%;
-    //     transform: translateX(-16px);
-
-    //     // box model
-    //     height: 12px;
-    //     width: 55px;
-
-    //     // visual
-    //     background-image: url("../../assets/img/menu-deco.svg");
-    //     background-repeat: no-repeat;
-    // }
+    @include atDesktop {
+        // box model
+        height: 60px;
+    }
 
     &::before {
         content: "";
@@ -87,13 +59,13 @@
     &__logo {
         // positioning
         position: absolute;
-        top: 12px;
-        left: 50px;
         z-index: 11;
+        top: 12px;
+        left: 20px;
 
         // box model
-        height: 34px;
-        width: 290px;
+        height: 28px;
+        width: 200px;
 
         // typography
         font-size: 0;
@@ -102,5 +74,100 @@
         background-image: url('../../assets/img/logo.png');
         background-repeat: no-repeat;
         background-size: 100%;
+
+        @include atDesktop {
+            // positioning
+            top: 12px;
+            left: 50px;
+
+            // box model
+            height: 34px;
+            width: 290px;
+        }
+    }
+
+    &__menu-icon {
+        // positioning
+        position: absolute;
+        right: 12px;
+        top: 13px;
+
+        // box model
+        height: 19px;
+        width: 20px;
+
+        @include atDesktop {
+            // box model
+            display: none;
+        }
+
+        &::before {
+            content: "";
+
+            // positioning
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            // box model
+            height: 3px;
+            width: 20px;
+
+            // visual
+            background-color: $darkSand;
+            transform-origin: 0 50%;
+            transition: all 0.3s ease-out;
+        }
+
+        &__middle {
+            // positioning
+            position: absolute;
+            left: 0;
+            top: 8px;
+
+            // box model
+            height: 3px;
+            width: 20px;
+
+            // visual
+            background-color: $darkSand;
+            transform-origin: 0 50%;
+            transition: all 0.3s ease-out;
+        }
+
+        &::after {
+            content: "";
+
+            // positioning
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            // box model
+            height: 3px;
+            width: 20px;
+
+            // visual
+            background-color: $darkSand;
+            transform-origin: 0 50%;
+            transition: all 0.3s ease-out;
+        }
+
+        &--close-x {
+            &::before {
+                // visual
+                transform: rotate(45deg) scaleX(1.18);
+            }
+
+            .site-header__menu-icon__middle {
+                // visual
+                opacity: 0;
+                transform: scaleX(0);
+            }
+
+            &::after {
+                transform: rotate(-45deg) scaleX(1.18);
+            }
+        }
     }
 }

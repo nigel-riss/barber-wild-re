@@ -33,20 +33,6 @@
         box-shadow: 2px 4px 14px 0 rgba($darkestSand, 0.45),
          inset 0 0 1px 0 rgba($darkSand, 0.44);
         border-radius: 2px;
-
-        &::before {
-            // positioning
-            left: -8px;
-            top: -7px;
-
-            // box model
-            height: 64px;
-            width: calc(100% + 16px);
-
-            // visual
-            border: 1px solid $darkSand;
-            border-radius: 32px;
-        }
     }
 
     &--right-m {

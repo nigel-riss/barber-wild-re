@@ -1,18 +1,41 @@
 .main-nav {
     // positioning
     position: relative;
+    // z-index: 1;
+    top: 48px;
 
     // box model
-    display: none;
-    padding-left: 360px;
-    // border: 1px solid red;
+    visibility: hidden;
 
     // typography
     font-size: 0;
 
+    // visual
+    background-color: rgba($darkGrey, 0.9);
+    border-bottom: 1px solid $darkSand;
+    opacity: 0;
+    transition: all 0.3s ease-out;
+
+    &--is-visible {
+        // box model
+        visibility: visible;
+
+        // visual
+        opacity: 1;
+    }
+
     @include atDesktop {
+        // positioning
+        top: 0;
+
         // box model
         display: block;
+        padding-left: 360px;
+        visibility: visible;
+
+        // visual
+        background-color: transparent;
+        opacity: 1;
     }
 
     ul {
@@ -26,11 +49,13 @@
 
     li {
         // box model
-        display: inline-block;
         margin: 0;
         padding: 0;
 
-        // visual
+        @include atDesktop {
+            // box model
+            display: inline-block;
+        }
     }
 
     a {

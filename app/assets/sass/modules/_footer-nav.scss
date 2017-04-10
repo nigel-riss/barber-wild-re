@@ -1,7 +1,7 @@
 .footer-nav {
     // positioning
     position: absolute;
-    bottom: -48px;
+    bottom: -38px;
     left: 0;
 
     // box model
@@ -11,22 +11,10 @@
     background-color: $darkGrey;
     border-top: 3px double $darkSand;
 
-    // &::before {
-    //     content: "";
-
-    //     // positioning
-    //     position: absolute;
-    //     left: 50%;
-    //     top: -14px;
-    //     transform: translateX(-16px);
-
-    //     // box model
-    //     height: 14px;
-    //     width: 31px;
-
-    //     // visual
-    //     background-image: url("../../assets/img/menu-f-deco.png");
-    // }
+    @include atDesktop {
+        // positioning
+        bottom: -48px;
+    }
 
     ul {
         // box model
@@ -50,18 +38,32 @@
     a {
         // box model
         display: block;
-        padding: 15px 30px;
-        padding-top: 16px;
-        padding-bottom: 14px;
+        padding: 10px 5px;
+        // padding-right:1px; 
+        // padding-left:1px;
+        // padding-top: 11px;
+        // padding-bottom: 9px;
+    
 
         // typography
         color: $darkSand;
         font-family: $captionFont;
-        font-size: 1rem;
+        font-size: 0.875rem;
         text-decoration: none;
 
         &:hover {
             color: $justSand;
+        }
+
+        @include atDesktop {
+            // box model
+            display: block;
+            padding: 15px 30px;
+            padding-top: 16px;
+            padding-bottom: 14px;
+
+            // typography
+            font-size: 1rem;
         }
     }
 }
