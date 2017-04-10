@@ -2,13 +2,18 @@
     // box model
     display: inline-block;
     vertical-align: top;
-    width: 300px;
+    width: 260px;
     margin: 20px;
     
     // typography
     color: $darkBlue;
     font-family: $mainFont;
     text-align: center;
+
+    @include atDesktop {
+        // box model
+        width: 300px;
+    }
 
     &__image {
         // box model
