@@ -1194,11 +1194,16 @@ button.button {
     font-family: "Roboto Slab", serif;
     font-size: 1rem;
     padding-left: 20px; }
+    .form__label__total {
+      color: #152026;
+      font-family: "Roboto Slab", serif;
+      font-size: 1rem;
+      padding-left: 20px; }
     @media (min-width: 1200px) {
       .form__label {
         font-size: 1.25rem; } }
   .form td {
-    padding-left: 20px; }
+    padding-left: 0px; }
   .form th {
     padding-left: 7px; }
   .form__input {
@@ -1220,8 +1225,20 @@ button.button {
       border: 1px solid #c9aa71; }
     .form__input[type="number"] {
       width: 5em;
-      width: 125%;
+      width: 50%;
       padding-right: 0px; }
+  .form__price {
+    color: #152026;
+    font-family: "Roboto Slab", serif;
+    font-size: 1rem;
+    font-weight: bold;
+    padding-left: 30px; }
+
+.order-table th:nth-child(3n) {
+  text-align: center; }
+
+.order-table td:nth-child(3n) {
+  text-align: center; }
 
 .shop-item-s {
   position: relative;
@@ -1453,28 +1470,49 @@ button.button {
 .order-table {
   width: 100%;
   margin: 40px 0;
-  margin-left: -20px; }
+  margin-left: -20px;
+  border: 1px solid #e9dcca;
+  border-left: none;
+  border-right: none; }
   @media (min-width: 1200px) {
     .order-table {
       margin-left: 0;
       padding-left: 20px; } }
   .order-table th {
     padding: 20px 10px;
+    border: 1px solid #e9dcca;
+    border-top: none;
+    border-right: none;
     text-align: left;
     font-size: 1rem;
     font-family: "Roboto Slab", serif; }
+    .order-table th:nth-child(1) {
+      border-left: none; }
     @media (min-width: 1200px) {
       .order-table th {
         font-size: 1.25rem; } }
     .order-table th:nth-child(3n) {
-      text-align: right; }
+      text-align: center; }
   .order-table td {
     padding: 5px 13px;
+    border: 1px solid #e9dcca;
+    border-right: none;
     text-align: left;
-    font-size: 1rem; }
+    font-size: 1rem;
+    border-top: none; }
+    .order-table td:nth-child(1) {
+      border-left: none;
+      border-right: none; }
+    .order-table td:nth-last-child(6) {
+      border-right: none; }
+    .order-table td:nth-last-child(5) {
+      border-right: none; }
     .order-table td:nth-child(3n) {
       padding-right: 0;
-      text-align: right; }
+      border-right: none;
+      text-align: center; }
+    .order-table td:nth-child(even) {
+      border-right: none; }
 
 .social {
   position: absolute;
