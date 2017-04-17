@@ -1,3 +1,24 @@
+<?php
+ /* Здесь проверяется существование переменных */
+    if (isset($_POST['phone'])) {$phone = $_POST['phone'];}
+    if (isset($_POST['name'])) {$name = $_POST['name'];}
+    if (isset($_POST['email'])) {$email = $_POST['email'];}
+ 
+/* Сюда впишите свою эл. почту */
+ $address = "bwildorder@gmail.com";
+ 
+/* А здесь прописывается текст сообщения, \n - перенос строки */
+ $mes = "Тема: Заказ\nТелефон: $phone\nИмя: $name\nE-mail: $email";
+ 
+/* А эта функция как раз занимается отправкой письма на указанный вами email */
+$sub='Заказ'; //сабж
+$email='Заказ <vpluce.ru>'; // от кого
+$send = mail ($address,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFrom:$email");
+ 
+ini_set('short_open_tag', 'On');
+header('Refresh: 3; URL=index.html');
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -43,7 +64,7 @@
                 </a>
             </li>
             <li>
-                <a class="current" href="shop.html">
+                <a class="current" href="#">
                     Каталог
                 </a>
             </li>
@@ -91,138 +112,16 @@
     </nav>
 
     <div class="cart">
-      
-        <a class="current" href="order.html">Оформить заказ</a>
-
+        <a href="order.html">Оформить заказ</a>
     </div>
 </header>
-   
-    <body>
-        <main class="site-main ">
-            <section class="site-section site-section--partner-form">
-                <div class="">
-        <form class="form" action="https://formspree.io/bwildorders@gmail.com"
-      method="POST"  name="">
-            <fieldset class="form__fieldset">
-            <legend class="form__legend">Заказ</legend>
-            
-         
-            <div class="form__input-group">
-                <label for="" class="form__icon">1</label>
-                <input type="text" name="name" class="form__input" placeholder="ФИО получателя">
-            </div>
-            <div class="form__input-group">
-                <label class="form__icon">2</label>
-                <input type="text" name="phone" class="form__input" placeholder="Телефон">
-            </div>
-            <div class="form__input-group">
-                <label class="form__icon">3</label>
-                <input type="text" name="email" class="form__input" placeholder="Email">
-            </div>
-            <div class="form__input-group">
-                <label class="form__icon">4</label>
-                <input type="text" name="address" class="form__input" placeholder="Адрес">
-            </div>
-    <!--table.order-table>(tr>th*3)+(tr>td*7)-->
-
-    <table class="order-table">
-        <tr>
-            <th>#</th>
-            <th>Наименование</th>
-            <th>Кол-во</th>
-        </tr>
-        <tr>
-            <td>1.</td>
-            <td><label for="" class="form__label">«Barber WILD» Pomade "Juicy"</label></td>
-
-            <!--<td><input type="number" class="form__input" min="0"></td>-->
-
-            <td><input type="number" name="Juicy" class="form__input" min="0" value="0"></td>
-
-        </tr>
-        <tr>
-            <td class="form__number">2.</td>
-            <td><label for="" class="form__label">«Barber WILD» Pomade "Ice Melon"</label></td>
-
-            <!--<td><input type="number" class="form__input" min="0"></td>-->
-
-            <td><input type="number" name="Ice-melon" class="form__input" min="0" value="0"></td>
-
-        </tr>
-        <tr>
-            <td>3.</td>
-            <td><label for="" class="form__label">«Barber WILD» Mate Clay</label></td>
-
-            <!--<td><input type="number" class="form__input" min="0"></td>-->
-
-            <td><input type="number" name="Clay" class="form__input" min="0" value="0"></td>
-
-        </tr>
-        <tr>
-            <td>4.</td>
-            <td><label for="" class="form__label">«Barber WILD» Shave Oil</label></td>
-
-            <!--<td><input type="number" class="form__input" min="0"></td>-->
-
-            <td><input type="number" name="Shave-Oil" class="form__input" min="0" value="0"></td>
-
-        </tr>
-        <tr>
-            <td>5.</td>
-        <td><label for="" class="form__label">«Barber WILD» Beard Oil "Idaho"</label></td>
-
-            <!--<td><input type="number" class="form__input" min="0"></td>-->
-
-            <td><input type="number" name="Beard-Oil-Idaho" class="form__input" min="0" value="0"></td>
-
-        </tr>
-          <tr>
-            <td>6.</td>
-            <td><label for="" class="form__label">«Barber WILD» Beard Oil "Tennessee"</label></td>
-
-            <!--<td><input type="number" class="form__input" min="0"></td>-->
-
-            <td><input type="number" name="Beard-Oil-Tennessee" class="form__input" min="0" value="0"></td>
-            
-        </tr>
-        <tr>
-            <td>7.</td>
-            <td><label for="" class="form__label">«Barber WILD» Shaving soap</label></td>
-
-            <!--<td><input type="number" class="form__input" min="0"></td>-->
-
-            <td><input type="number" name="Soap" class="form__input" min="0" value="0"></td>
-
-        </tr>
-        <tr>
-            <td>8.</td>
-            <td><label for="" class="form__label">«Barber WILD» After Shave Balm</label></td>
-
-            <!--<td><input type="number" class=gi "form__input" min="0"></td>-->
-
-            <td><input type="number" name="AfterShaveBalm" class="form__input" min="0" value="0"></td>
-
-        </tr>
-    </table>    
-
-                    <button class="button" type="submit" >
-                        Подтвердить
-                    </button>
-              
-                  </fieldset>
-            </form>
-              
-                  </div>
-                
-        </section>
-        </main>    
-            
-        
-    
 
 
-  <footer class="site-footer">
-      <div class="social">
+
+
+
+ <footer class="site-footer">
+        <div class="social">
             <a class="social__icon" href="https://vk.com/barberwild">
                 <svg class="social__vk" data-name="ssVk.svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 455.62 304.37">
                     <defs>

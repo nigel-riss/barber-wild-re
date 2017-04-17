@@ -1175,7 +1175,7 @@ button.button {
     padding-bottom: 20px; }
     @media (min-width: 1200px) {
       .form__input-group {
-        padding-left: 80px; } }
+        padding-left: 0px; } }
   .form__icon {
     position: absolute;
     left: 12px;
@@ -1208,8 +1208,8 @@ button.button {
     padding-left: 7px; }
   .form__input {
     padding: 15px;
-    padding-left: 20px;
-    width: 100%;
+    padding-left: 10px;
+    width: 80%;
     color: #152026;
     font-family: "Roboto Slab", serif;
     font-size: 1.25rem;
@@ -1273,8 +1273,8 @@ button.button {
       @media (min-width: 1200px) {
         .shop-item-s__image img {
           display: inline-block;
-          height: 400px;
-          width: 400px; } }
+          height: 360px;
+          width: 360px; } }
     @media (min-width: 1200px) {
       .shop-item-s__image {
         position: absolute;
@@ -1323,7 +1323,9 @@ button.button {
         width: 460px; }
       .shop-item-s:hover .shop-item-s__image {
         top: -20px;
-        width: 530px; }
+        left: -46px;
+        width: 530px;
+        height: 530px; }
         .shop-item-s:hover .shop-item-s__image img {
           height: 460px;
           width: 460px; }
@@ -1473,7 +1475,8 @@ button.button {
   margin-left: -20px;
   border: 1px solid #e9dcca;
   border-left: none;
-  border-right: none; }
+  border-right: none;
+  border-bottom: none; }
   @media (min-width: 1200px) {
     .order-table {
       margin-left: 0;
