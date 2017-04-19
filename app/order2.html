@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <script src='https://www.google.com/recaptcha/api.js'></script>
     
     <title>Barber WILD</title>
 
@@ -15,19 +15,10 @@
     <link rel="import" href="footer.html">
 </head>
 <body>
-    <!--
-        Page header
-    -->
-    <!--<script>
-        var menuLink = document.querySelector('link[rel="import"][href="header.html"]');
-        var menuContent = menuLink.import;
-        var menuElement = menuContent.querySelector('.site-header');
-        document.body.appendChild(menuElement.cloneNode(true));
-    </script>-->
 
     <header class="site-header">
     <a href="index.html">
-        <div class="site-header__logo">
+        <div class="site-header__logo"> 
             Barber WILD
         </div>
     </a>
@@ -102,7 +93,7 @@
             <section class="site-section site-section--partner-form">
                 <div class="">
         <form class="form" action="mail.php"
-      method="POST"  name="">
+            method="POST"  name="">
             <fieldset class="form__fieldset">
             <legend class="form__legend">Заказ</legend>
             
@@ -123,6 +114,7 @@
                 <label class="form__icon">4</label>
                 <input type="text" name="address" class="form__input" placeholder="Адрес">
             </div>
+            <div class="g-recaptcha" data-sitekey="6LevdB0UAAAAAOrLCgx8W1kNJ9BPIbhgMUqKb9Sn"></div>
     <!--table.order-table>(tr>th*3)+(tr>td*7)-->
 
     <table class="order-table">
@@ -205,9 +197,10 @@
         </tr>
     </table>    
 
-                    <button class="button" type="submit" >
+                    <button  class="button g-recaptcha" type="submit"  >
                         Подтвердить
                     </button>
+                    <div class="g-recaptcha" data-sitekey="6LevdB0UAAAAAOrLCgx8W1kNJ9BPIbhgMUqKb9Sn"></div>
               
                   </fieldset>
             </form>
