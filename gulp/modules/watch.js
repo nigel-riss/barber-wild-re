@@ -19,7 +19,18 @@ gulp.task('watch', function() {
     watch('./app/assets/sass/**/*.scss', function() {
         gulp.start('cssInject');
     })
-});
+        //wordpress
+    watch('./wp/*.php',function(){
+        gulp.start('copyPHP');
+    });
+    watch('./app/temp/styles/styles.css',function(){
+        gulp.start('copyCSS');
+    });
+    watch('./app/temp/scripts/App.js',function(){
+        gulp.start('copyJS');
+    });
+    });
+
 
 gulp.task('cssInject', ['styles'], function() {
     return gulp.src('./app/temp/styles/styles.css')

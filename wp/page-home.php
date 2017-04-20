@@ -9,7 +9,7 @@
 
 
     <link  href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400&amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="./temp/styles/styles.css">
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
     <link rel="import" href="header.html">
     <link rel="import" href="footer.html">
 </head>
